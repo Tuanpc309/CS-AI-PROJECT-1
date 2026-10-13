@@ -1,0 +1,66 @@
+{
+  "id": "no_solution_02",
+  "grid": [
+    "..........",
+    ".FSFFF....",
+    ".FFFBF....",
+    ".FFFBF....",
+    ".FFFXF....",
+    "........G.",
+    ".........."
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    5,
+    8
+  ],
+  "bridges": [
+    {
+      "id": "gate",
+      "cells": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "initial_enabled": false
+    }
+  ],
+  "switches": [
+    {
+      "id": "soft_gate",
+      "cell": [
+        1,
+        2
+      ],
+      "type": "SOFT",
+      "effects": [
+        {
+          "bridge_id": "gate",
+          "operation": "TOGGLE"
+        }
+      ]
+    },
+    {
+      "id": "heavy_gate",
+      "cell": [
+        4,
+        4
+      ],
+      "type": "HEAVY",
+      "effects": [
+        {
+          "bridge_id": "gate",
+          "operation": "TOGGLE"
+        }
+      ]
+    }
+  ]
+}

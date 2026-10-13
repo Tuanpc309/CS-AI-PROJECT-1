@@ -1,0 +1,51 @@
+{
+  "id": "switch_02",
+  "grid": [
+    ".........",
+    ".FFFXBBG.",
+    ".FFFF....",
+    ".FFFF....",
+    ".FFFF....",
+    "........."
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    1,
+    7
+  ],
+  "bridges": [
+    {
+      "id": "gate",
+      "cells": [
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "initial_enabled": false
+    }
+  ],
+  "switches": [
+    {
+      "id": "heavy_gate",
+      "cell": [
+        1,
+        4
+      ],
+      "type": "HEAVY",
+      "effects": [
+        {
+          "bridge_id": "gate",
+          "operation": "SET_OPEN"
+        }
+      ]
+    }
+  ]
+}

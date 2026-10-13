@@ -1,0 +1,60 @@
+{
+  "created_at_utc": "2026-10-13T17:42:55.878762+00:00",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\admin\\Desktop\\CS-AI\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "machine": "AMD64",
+  "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "packages": {
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1"
+  },
+  "memory_measurement": "peak Python allocations measured by tracemalloc.start(1), not total process RAM",
+  "timing": "perf_counter; total=preprocessing+search; excludes spawn/load/replay",
+  "expanded_definition": "valid non-goal pop that generates successors; stale heap entries excluded",
+  "runs_per_configuration": 3,
+  "time_limit_seconds": 30.0,
+  "memory_limit_bytes": 268435456,
+  "memory_check_interval": 256,
+  "process_start_method": "spawn",
+  "levels": [
+    "basic_01.json",
+    "basic_02.json",
+    "fragile_01.json",
+    "fragile_02.json",
+    "switch_01.json",
+    "switch_02.json",
+    "split_01.json",
+    "split_02.json",
+    "combined_01.json",
+    "combined_02.json",
+    "no_solution_01.json",
+    "no_solution_02.json"
+  ],
+  "configurations": [
+    {
+      "algorithm": "BFS",
+      "cost_policy": "UNIT"
+    },
+    {
+      "algorithm": "DFS",
+      "cost_policy": "UNIT"
+    },
+    {
+      "algorithm": "UCS",
+      "cost_policy": "UNIT"
+    },
+    {
+      "algorithm": "ASTAR",
+      "cost_policy": "UNIT"
+    },
+    {
+      "algorithm": "UCS",
+      "cost_policy": "FRAGILE_PENALTY"
+    },
+    {
+      "algorithm": "ASTAR",
+      "cost_policy": "FRAGILE_PENALTY"
+    }
+  ]
+}
