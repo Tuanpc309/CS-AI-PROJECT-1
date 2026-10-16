@@ -104,6 +104,7 @@ class Level:
     goal: Coord
     bridges: tuple[Bridge, ...] = ()
     switches: tuple[Switch, ...] = ()
+    biome_id: str = "forest"
 
     @property
     def height(self) -> int:

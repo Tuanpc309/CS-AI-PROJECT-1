@@ -1,0 +1,22 @@
+{
+  "id": "campaign_01",
+  "grid": [
+    ".......",
+    ".FF....",
+    ".FF.F..",
+    ".FF.FF.",
+    ".FFFFG.",
+    "......."
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    4,
+    5
+  ],
+  "bridges": [],
+  "switches": [],
+  "biomeId": "forest"
+}

@@ -1,0 +1,111 @@
+{
+  "id": "campaign_24",
+  "grid": [
+    "...............",
+    ".FFFT..........",
+    "....FSBF.......",
+    "....B.F........",
+    ".FBSBFFFFFFFFF.",
+    "......FFFFFFFG.",
+    "......FFFFFFF..",
+    "..............."
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    5,
+    13
+  ],
+  "bridges": [
+    {
+      "id": "a_access",
+      "cells": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "initial_enabled": false
+    },
+    {
+      "id": "b_access",
+      "cells": [
+        [
+          2,
+          6
+        ]
+      ],
+      "initial_enabled": false
+    },
+    {
+      "id": "return_gate",
+      "cells": [
+        [
+          4,
+          2
+        ]
+      ],
+      "initial_enabled": true
+    }
+  ],
+  "switches": [
+    {
+      "id": "splitter",
+      "cell": [
+        1,
+        4
+      ],
+      "type": "SPLIT",
+      "effects": [],
+      "destinations": [
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          7
+        ]
+      ]
+    },
+    {
+      "id": "a_button",
+      "cell": [
+        4,
+        3
+      ],
+      "type": "SOFT",
+      "effects": [
+        {
+          "bridge_id": "b_access",
+          "operation": "SET_OPEN"
+        },
+        {
+          "bridge_id": "return_gate",
+          "operation": "SET_CLOSED"
+        }
+      ]
+    },
+    {
+      "id": "b_button",
+      "cell": [
+        2,
+        5
+      ],
+      "type": "SOFT",
+      "effects": [
+        {
+          "bridge_id": "a_access",
+          "operation": "SET_OPEN"
+        }
+      ]
+    }
+  ],
+  "biomeId": "cavern"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "quiet_01",
+  "grid": [
+    "..........",
+    "......FFF.",
+    "....FFFFG.",
+    "..FFFFFFF.",
+    ".FFFFFFF..",
+    ".FFFFFF...",
+    ".FFFF.....",
+    ".........."
+  ],
+  "start": [5, 1],
+  "goal": [2, 8],
+  "bridges": [],
+  "switches": []
+}

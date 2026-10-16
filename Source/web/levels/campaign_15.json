@@ -1,0 +1,74 @@
+{
+  "id": "campaign_15",
+  "grid": [
+    "...............",
+    ".SFF......F....",
+    ".FFF......F....",
+    ".F........F....",
+    ".FFFF..FFFF....",
+    ".FFFF..FFFF....",
+    ".FFFF..FFFF..F.",
+    ".FFFFBBFFFFBBG.",
+    ".F.FF..FFFF..F.",
+    "..............."
+  ],
+  "start": [
+    7,
+    2
+  ],
+  "goal": [
+    7,
+    13
+  ],
+  "bridges": [
+    {
+      "id": "entry_bridge",
+      "cells": [
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ],
+      "initial_enabled": false
+    },
+    {
+      "id": "exit_bridge",
+      "cells": [
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          12
+        ]
+      ],
+      "initial_enabled": false
+    }
+  ],
+  "switches": [
+    {
+      "id": "soft_entry",
+      "cell": [
+        1,
+        1
+      ],
+      "type": "SOFT",
+      "effects": [
+        {
+          "bridge_id": "entry_bridge",
+          "operation": "TOGGLE"
+        },
+        {
+          "bridge_id": "exit_bridge",
+          "operation": "SET_OPEN"
+        }
+      ]
+    }
+  ],
+  "biomeId": "neon"
+}

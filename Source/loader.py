@@ -55,7 +55,10 @@ def initial_state(level: Level) -> State:
 
 def level_from_dict(data: Any) -> tuple[Level, State]:
     """Validate toàn bộ schema rồi mới tạo các frozen dataclass."""
-    data = _object(data, "level", {"id", "grid", "start", "goal", "bridges", "switches"})
+    data = _object(data, "level", {"id", "grid", "start", "goal", "bridges", "switches"}, {"biomeId"})
+    biome_id = data.get("biomeId", "forest")
+    if biome_id not in ("forest", "dusk", "neon", "cavern", "celestial"):
+        raise LevelFormatError("biomeId: biome không được nhận diện")
     level_id = _identifier(data["id"], "level.id")
     rows = _array(data["grid"], "grid")
     if not rows or any(not isinstance(row, str) or not row for row in rows):
@@ -157,7 +160,7 @@ def level_from_dict(data: Any) -> tuple[Level, State]:
         raise LevelFormatError("switches: mỗi ô S/X/T phải có đúng một định nghĩa")
     level = Level(level_id, grid, start, goal,
                   tuple(sorted(bridges, key=lambda item: item.id)),
-                  tuple(sorted(switches, key=lambda item: item.id)))
+                  tuple(sorted(switches, key=lambda item: item.id)), biome_id)
     return level, initial_state(level)
 
 

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Bloxorz level",
+  "description": "Static format accepted by Source/loader.py. Coordinates are [row, column], zero based; the loader also validates geometry and cross references.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "grid", "start", "goal", "bridges", "switches"],
+  "properties": {
+    "biomeId": {"enum": ["forest", "dusk", "neon", "cavern", "celestial"], "default": "forest"},
+    "id": {"$ref": "#/$defs/identifier"},
+    "grid": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1, "pattern": "^[.FGOBSXT]+$"},
+      "description": "Equal-width rows. . void; F floor; G goal; O fragile; B bridge; S soft switch; X heavy switch; T split switch."
+    },
+    "start": {"$ref": "#/$defs/coordinate", "description": "An F tile; the block starts upright."},
+    "goal": {"$ref": "#/$defs/coordinate", "description": "The unique G tile; win when the merged block is upright here."},
+    "bridges": {"type": "array", "items": {"$ref": "#/$defs/bridge"}},
+    "switches": {"type": "array", "items": {"$ref": "#/$defs/switch"}}
+  },
+  "$defs": {
+    "identifier": {"type": "string", "minLength": 1, "pattern": "\\S"},
+    "coordinate": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"type": "integer", "minimum": 0}
+    },
+    "bridge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "cells", "initial_enabled"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "cells": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/coordinate"}},
+        "initial_enabled": {"type": "boolean"}
+      }
+    },
+    "effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bridge_id", "operation"],
+      "properties": {
+        "bridge_id": {"$ref": "#/$defs/identifier"},
+        "operation": {"enum": ["TOGGLE", "SET_OPEN", "SET_CLOSED"]}
+      }
+    },
+    "switch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "cell", "type", "effects"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "cell": {"$ref": "#/$defs/coordinate"},
+        "type": {"enum": ["SOFT", "HEAVY", "SPLIT"]},
+        "effects": {"type": "array", "items": {"$ref": "#/$defs/effect"}},
+        "destinations": {"type": "array", "minItems": 2, "maxItems": 2, "uniqueItems": true, "items": {"$ref": "#/$defs/coordinate"}}
+      },
+      "if": {"properties": {"type": {"const": "SPLIT"}}, "required": ["type"]},
+      "then": {"required": ["destinations"]},
+      "else": {"not": {"required": ["destinations"]}}
+    }
+  },
+  "$comment": "Runtime semantic validation: rectangular grid; coordinates in bounds; start on F; exactly one G matching goal; unique bridge/switch IDs; every B belongs to exactly one bridge; every S/X/T has one correctly typed switch; effects reference existing bridges; no conflicting SET_OPEN/SET_CLOSED operations; SPLIT destinations on distinct, non-adjacent F tiles."
+}

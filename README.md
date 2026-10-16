@@ -1,5 +1,14 @@
 # Bloxorz Solver — Hướng dẫn đồ án và phân công nhóm
 
+**Chơi trên web:** [Bloxorz · Quiet Worlds — Kazu](https://bloxorz-kazu.bloomybud4.chatgpt.site).
+30 màn / 5 biome, camera 360°, hồ sơ local và engine Python chạy ngay trong
+trình duyệt. Xem [build và triển khai](docs/deployment.md).
+
+**Giao diện in-game mới:** chạy `python Source/main.py --web` để mở bản
+isometric responsive với HUD, Undo, Pause và animation chiến thắng. Xem
+[hướng dẫn UI](Source/web/README.md) và [kết quả kiểm tra/preview](docs/ui-verification.md).
+Giao diện web dùng lại engine Python; bản Tkinter vẫn chạy bằng lệnh không có `--web`.
+
 Tài liệu này giúp nhóm 5 thành viên hiểu yêu cầu, biết việc mình phải làm, biết cần trao đổi với ai và có tiêu chí kiểm tra trước khi nộp bài.
 
 **Trạng thái hiện tại:** đã tạo bản chạy đầy đủ trong [Source](./Source/README.md): engine cơ bản/nâng cao, loader JSON, GUI, controller/worker, BFS/DFS/UCS/A*, 12 màn và công cụ thực nghiệm. **129 test đã đạt; 216 lượt đo đúng kết quả dự kiến, mọi lời giải FOUND đã replay qua engine.** Có dữ liệu gốc, bảng và 5 biểu đồ trong [results](./results/README.md). Môi trường đã kiểm tra là Python 3.12.14 trên Windows; mục tiêu nhóm vẫn là 3.13.x và cần kiểm tra lại trên máy nộp. Báo cáo PDF, video, tên/MSSV, deadline và nơi nộp chưa hoàn thiện. Xem [ghi chép xác minh](./docs/verification.md) và [bàn giao theo thành viên](./docs/report-parts/README.md).

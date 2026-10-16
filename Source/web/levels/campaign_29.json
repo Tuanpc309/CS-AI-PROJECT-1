@@ -1,0 +1,147 @@
+{
+  "id": "campaign_29",
+  "grid": [
+    ".................",
+    ".FFFT............",
+    "....FSBFBF.......",
+    "....B............",
+    ".FSBFXFOOOOBBFFG.",
+    "....FFFOOOOBBFFF.",
+    "....FFF......FFF.",
+    "................."
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    4,
+    15
+  ],
+  "bridges": [
+    {
+      "id": "a_access",
+      "cells": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          3
+        ]
+      ],
+      "initial_enabled": false
+    },
+    {
+      "id": "b_access",
+      "cells": [
+        [
+          2,
+          6
+        ]
+      ],
+      "initial_enabled": false
+    },
+    {
+      "id": "return_gate",
+      "cells": [
+        [
+          2,
+          8
+        ]
+      ],
+      "initial_enabled": true
+    },
+    {
+      "id": "stellar_exit",
+      "cells": [
+        [
+          4,
+          11
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      "initial_enabled": false
+    }
+  ],
+  "switches": [
+    {
+      "id": "splitter",
+      "cell": [
+        1,
+        4
+      ],
+      "type": "SPLIT",
+      "effects": [],
+      "destinations": [
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          9
+        ]
+      ]
+    },
+    {
+      "id": "a_button",
+      "cell": [
+        4,
+        2
+      ],
+      "type": "SOFT",
+      "effects": [
+        {
+          "bridge_id": "b_access",
+          "operation": "SET_OPEN"
+        }
+      ]
+    },
+    {
+      "id": "b_button",
+      "cell": [
+        2,
+        5
+      ],
+      "type": "SOFT",
+      "effects": [
+        {
+          "bridge_id": "a_access",
+          "operation": "SET_OPEN"
+        },
+        {
+          "bridge_id": "return_gate",
+          "operation": "SET_CLOSED"
+        }
+      ]
+    },
+    {
+      "id": "stellar_signal",
+      "cell": [
+        4,
+        5
+      ],
+      "type": "HEAVY",
+      "effects": [
+        {
+          "bridge_id": "stellar_exit",
+          "operation": "SET_OPEN"
+        }
+      ]
+    }
+  ],
+  "biomeId": "celestial"
+}

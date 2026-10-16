@@ -1,5 +1,42 @@
 # Bloxorz Solver — hướng dẫn chạy và đọc mã
 
+## Giao diện in-game mới — Isometric Web UI
+
+Đã bổ sung giao diện trình duyệt responsive: Three.js voxel 3D, nền biome/kính mờ,
+HUD số bước và sao, passcode, Pause/Restart, Undo 5 lần, D-pad xoay 45°,
+vuốt theo góc nhìn, modal thắng/thua và chọn màn. Luật chơi vẫn chạy bằng
+engine Python hiện tại; Three.js được lưu cùng source, không cần Node.js/npm để chơi.
+
+Từ thư mục chứa `Source`:
+
+```powershell
+.\.venv\Scripts\python.exe Source\main.py --web
+```
+
+Hoặc dùng Python đã cài: `python Source/main.py --web`. Trình duyệt tự mở
+`http://127.0.0.1:8000`. Giữ terminal chạy trong lúc chơi. Đọc
+[hướng dẫn UI và cấu trúc mã](web/README.md) để chạy trên điện thoại cùng Wi-Fi,
+đổi cổng, chọn màn và chỉnh theme/animation. Giao diện Tkinter và solver cũ vẫn
+mở bằng lệnh không có `--web` như bên dưới.
+
+Game mặc định mở [campaign 30 màn / 5 biome](web/levels/README.md), có rừng voxel,
+mây hoàng hôn, phố neon, hang pha lê và miền sao. Three.js dựng cảnh 3D với
+camera orbit 360°, chuột phải/hai ngón để xoay; phím hướng theo camera.
+Khối lăn quanh cạnh đáy đúng 90° trong 220 ms, sau đó nén nhẹ 50 ms, phát bụi
+pixel và làm ô đỡ lún nhẹ khi đứng. Cỏ/cây dùng vertex shader gió neo gốc với
+InstancedMesh; có hook âm thanh/haptic và hỗ trợ reduced motion.
+
+Màn hình đầu cho chọn/tạo hồ sơ với 6 avatar pixel. LocalStorage giữ riêng màn
+đã mở, sao, số bước và thời gian tốt nhất cho từng người; đổi người chơi ở
+header hoặc Pause. Tiến trình cũ được nhập một lần vào `Hành trình cũ`. Đây là
+hồ sơ local theo trình duyệt, chưa đồng bộ cloud. Đọc
+[cấu trúc hồ sơ và hook VFX](web/PROFILES-AND-VFX.md) để tích hợp thêm.
+
+`Khoảng lặng` và 12 màn benchmark nằm trong mục bổ sung. Bộ Python đã qua
+**225 test trên Windows**, không có skip; **69 test Node** kiểm tra hình học,
+vòng đời animation, camera, gesture, hồ sơ, đồng hồ và gió. Kiểm tra giao diện thực tế được
+ghi ở [UI verification](../docs/ui-verification.md).
+
 Đây là bản triển khai theo kiến trúc nhóm đã chốt: Loader → Controller → Engine, bốn solver cùng gọi Engine, GUI Tkinter hiển thị state và replay. Có luật cơ bản, fragile, cầu, soft/heavy switch, toggle/SET, tách/đổi/ghép cube và bộ 12 màn. Xem `../README.md` để đọc yêu cầu của thầy, thang điểm và phân công đầy đủ; xem `levels/README.md` để lấy chuỗi chơi thử từng màn.
 
 ## 1. Môi trường
@@ -132,7 +169,9 @@ print(result.status.value, result.actions, result.solution_cost)
 
 ## 8. Giới hạn và việc hoàn thiện bản nộp
 
-- GUI là góc nhìn 2D và replay từng bước; chưa có editor màn, save/load phiên, animation rơi hoặc Cancel.
+- GUI Tkinter là góc nhìn 2D và replay từng bước. Giao diện web mới có isometric,
+  animation lăn/rơi và Undo; chưa có editor, lưu/khôi phục phiên đang chơi hoặc
+  bảng điều khiển solver trong trình duyệt. Mở Tkinter để dùng BFS/DFS/UCS/A* và metrics.
 - Bộ 12 màn nhỏ để kiểm chứng cơ chế. Chênh lệch thời gian rất nhỏ không đủ để kết luận một thuật toán luôn nhanh hơn; muốn phân tích quy mô lớn cần thêm bộ màn và ghi riêng phiên bản thực nghiệm.
 - Ngưỡng memory kiểm tra định kỳ là ngưỡng mềm, có thể bị vượt giữa hai lần kiểm tra. Watchdog ngoài worker dùng để tránh treo, không thay số liệu tìm kiếm.
 - Source và dữ liệu đo không thay cho báo cáo/video. Nhóm vẫn phải hiểu mã, kiểm tra trên Python/máy nộp, điền tên/MSSV/phân công thực tế, viết Report.pdf, nguồn tham khảo/phụ lục dùng AI và quay video theo đề.

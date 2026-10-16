@@ -1,0 +1,25 @@
+{
+  "id": "campaign_03",
+  "grid": [
+    "............",
+    ".FFF....FGF.",
+    ".FFF....FFF.",
+    ".FFF....FFF.",
+    ".FFFF..FFFF.",
+    ".FFFF..FFFF.",
+    ".FFFF..FFFF.",
+    ".FFOOOOFFFF.",
+    ".FFOOOOFFFF.",
+    "............"
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    1,
+    9
+  ],
+  "bridges": [],
+  "switches": []
+}

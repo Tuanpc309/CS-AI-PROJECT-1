@@ -1,0 +1,41 @@
+{
+  "id": "campaign_12",
+  "grid": [
+    "............",
+    ".FFF....FFG.",
+    ".FFF....FFF.",
+    ".FFF....FFF.",
+    ".F.FF..FFFF.",
+    "...FF..FFFF.",
+    ".FFFF..FF.F.",
+    ".FFOOOOBFFF.",
+    ".FFOOOOBFFF.",
+    "............"
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    1,
+    10
+  ],
+  "bridges": [
+    {
+      "id": "cloud_walk",
+      "cells": [
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          7
+        ]
+      ],
+      "initial_enabled": true
+    }
+  ],
+  "switches": [],
+  "biomeId": "dusk"
+}
