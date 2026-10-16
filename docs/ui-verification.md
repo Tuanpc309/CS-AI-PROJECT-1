@@ -2,7 +2,18 @@
 
 Kiểm tra ngày 15–16/10/2026, Asia/Saigon.
 
-## Website công khai Kazu — 17/10/2026 (Asia/Saigon)
+## GitHub Pages — 16/10/2026
+
+- Đã chuyển website chính sang [huyokazu.github.io/bloxorz-kazu](https://huyokazu.github.io/bloxorz-kazu/).
+  Workflow ở repo `huyokazu/bloxorz-kazu` build từ nhánh `kazu-bloxorz-web` của
+  repo đồ án, test Python/JS và replay đủ 30 màn bằng WebAssembly, rồi deploy
+  thành công. Tài khoản Kazu quản trị repo deploy này.
+- Browser trên URL mới tải được engine và toàn bộ scene từ đường dẫn project.
+  Đã tạo hồ sơ Kazu, lăn một bước, Undo về 0 bước, restart để khôi phục 5 lượt
+  Undo. Console không có warning/error. Tab bàn giao trỏ đến địa chỉ mới.
+- Các phần bên dưới lưu kết quả của những bản trước khi chuyển hosting.
+
+## Website công khai Kazu trước khi chuyển hosting — 16/10/2026 (Asia/Saigon)
 
 - Đã xuất bản thành công trên Sites, chế độ public:
   [Bloxorz by Kazu](https://bloxorz-kazu.bloomybud4.chatgpt.site).
