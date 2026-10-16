@@ -2,6 +2,26 @@
 
 Kiểm tra ngày 15–16/10/2026, Asia/Saigon.
 
+## Website công khai Kazu — 17/10/2026 (Asia/Saigon)
+
+- Đã xuất bản thành công trên Sites, chế độ public:
+  [Bloxorz by Kazu](https://bloxorz-kazu.bloomybud4.chatgpt.site).
+  Source nằm ở nhánh `kazu-bloxorz-web`, tác giả commit Kazu / `huyokazu`.
+- CI GitHub chạy thành công với **225 test Python + 74 test JavaScript**,
+  build static và smoke test dùng WebAssembly thật. Replay cả 30 campaign
+  đúng optimum và 3 sao, gồm tách/ghép khối, fragile, switch và cầu; kiểm tra
+  thêm phiên riêng, Pause, Undo, restart và request không hợp lệ.
+- Browser trên URL production tải được Python engine từ cùng origin, tạo hồ
+  sơ Kazu, chơi màn 1 **5/5 bước, 3 sao**, hiện thời gian 0:11 và thông báo
+  lưu thành công. Next nạp màn 2. Reload giữ hồ sơ, 3 sao và màn 2 đã mở.
+- Viewport 390×844: form tên/6 avatar và modal thắng hoạt động. 320×568:
+  game, selector, form avatar không tràn ngang; game không tràn dọc. 1280×720:
+  bố cục desktop không tràn trang. Đã reset viewport sau khi kiểm tra.
+- Console không có warning/error trong các luồng trên. Các kiểm tra này bổ
+  sung cho giới hạn browser của lượt trước; chưa benchmark điện thoại vật lý.
+
+![Website Kazu](ui-preview/kazu-live-mobile.png)
+
 ## Hồ sơ nhiều người chơi và game feel — 16/10/2026
 
 - **225 test Python + 69 test JavaScript đạt**. Các ca mới bao phủ tách slot,

@@ -118,6 +118,6 @@ thấp; chưa benchmark trên điện thoại vật lý, nên không cam kết 6
 node --test (Get-ChildItem Source/tests/*.test.mjs).FullName
 ```
 
-Bộ hiện tại: 225 test Python, 69 test JS. Các test mới kiểm tra tách hồ sơ,
+Bộ hiện tại: 225 test Python, 74 test JS. Các test mới kiểm tra tách hồ sơ,
 merge stats, migrate, storage failure, gating, đồng hồ, footprint/settle, bụi,
 gốc gió và uniform instancing. Xem `docs/ui-verification.md` cho kiểm tra UI.

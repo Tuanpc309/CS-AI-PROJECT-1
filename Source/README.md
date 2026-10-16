@@ -33,7 +33,7 @@ hồ sơ local theo trình duyệt, chưa đồng bộ cloud. Đọc
 [cấu trúc hồ sơ và hook VFX](web/PROFILES-AND-VFX.md) để tích hợp thêm.
 
 `Khoảng lặng` và 12 màn benchmark nằm trong mục bổ sung. Bộ Python đã qua
-**225 test trên Windows**, không có skip; **69 test Node** kiểm tra hình học,
+**225 test trên Windows**, không có skip; **74 test Node** kiểm tra hình học,
 vòng đời animation, camera, gesture, hồ sơ, đồng hồ và gió. Kiểm tra giao diện thực tế được
 ghi ở [UI verification](../docs/ui-verification.md).
 
