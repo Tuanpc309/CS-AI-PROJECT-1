@@ -1,6 +1,6 @@
 # Bloxorz Solver — Hướng dẫn đồ án và phân công nhóm
 
-**Chơi trên web:** [Bloxorz · Quiet Worlds — Kazu](https://bloxorz-kazu.bloomybud4.chatgpt.site).
+**Chơi trên web:** [Bloxorz · Quiet Worlds — Kazu](https://huyokazu.github.io/bloxorz-kazu/).
 30 màn / 5 biome, camera 360°, hồ sơ local và engine Python chạy ngay trong
 trình duyệt. Xem [build và triển khai](docs/deployment.md).
 

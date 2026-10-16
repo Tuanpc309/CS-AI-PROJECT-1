@@ -1,9 +1,12 @@
 # Triển khai web
 
-Website: [Bloxorz · Quiet Worlds — Kazu](https://bloxorz-kazu.bloomybud4.chatgpt.site).
+Website: [Bloxorz · Quiet Worlds — Kazu](https://huyokazu.github.io/bloxorz-kazu/).
 
 Source được phát triển ở nhánh `kazu-bloxorz-web`, dựa trên `tuanpc` của
-`Tuanpc309/CS-AI-PROJECT-1`. Website công khai được triển khai qua Sites.
+`Tuanpc309/CS-AI-PROJECT-1`. Website công khai được triển khai qua GitHub Pages
+ở repo riêng [huyokazu/bloxorz-kazu](https://github.com/huyokazu/bloxorz-kazu).
+Tài khoản Kazu có quyền quản trị repo deploy này nên không cần thay đổi quyền
+quản trị repo đồ án.
 
 ## Bản web không cần server Python
 
@@ -44,7 +47,19 @@ và 3 sao; kiểm tra tách/ghép, switch, fragile, cầu, pause, Undo, restart,
 phiên độc lập và request không hợp lệ. Bộ hiện tại còn có 225 test Python và
 74 test JS. Chưa benchmark cold start/FPS trên điện thoại vật lý.
 
-## GitHub Pages tùy chọn
+## Cập nhật website chính
+
+Sau khi push source vào `kazu-bloxorz-web`, mở repo
+`huyokazu/bloxorz-kazu` → **Actions → Publish Bloxorz by Kazu → Run workflow**.
+Workflow lấy source mới nhất từ nhánh đó, chạy toàn bộ test, build, replay 30
+màn bằng WASM rồi deploy bằng token tạm thời do GitHub cấp. Không cần lưu PAT
+hoặc khóa deploy trong repo. `deployment.json` trên website ghi lại source
+commit đã được triển khai.
+
+Hồ sơ lưu theo origin của trình duyệt. Địa chỉ GitHub Pages mới có vùng lưu
+riêng; các hồ sơ trên website trước đó không tự chuyển sang địa chỉ mới.
+
+## GitHub Pages trực tiếp ở repo đồ án (tùy chọn)
 
 Workflow `.github/workflows/deploy-pages.yml` tự kiểm tra source, build và chạy
 smoke test khi push vào `kazu-bloxorz-web` hoặc `main`. Nhánh mới không được
@@ -57,7 +72,8 @@ variable `ENABLE_GITHUB_PAGES=true` và chạy lại workflow. Nếu chưa bật
 CI vẫn kiểm tra đầy đủ và bỏ qua riêng bước deploy Pages.
 
 Bản tĩnh sử dụng đường dẫn tương đối, chạy được cả ở `/` và đường dẫn project
-`/CS-AI-PROJECT-1/`. Website Sites ở trên không cần bật GitHub Pages.
+`/CS-AI-PROJECT-1/` hoặc `/bloxorz-kazu/`. Website chính ở trên được quản lý
+bằng workflow riêng trong repo deploy.
 
 Tham khảo: [Pyodide deployment](https://pyodide.org/en/stable/usage/downloading-and-deploying.html),
 [Web Worker](https://pyodide.org/en/stable/usage/webworker.html),
