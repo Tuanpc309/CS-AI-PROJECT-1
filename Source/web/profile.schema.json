@@ -1,0 +1,21 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "title":"Local Bloxorz user profile","type":"object",
+ "required":["id","username","avatar","unlockedLevel","levelStats","createdAt","lastPlayed"],
+ "properties":{
+  "id":{"type":"string","pattern":"^[A-Za-z0-9_-]{1,80}$"},
+  "username":{"type":"string","minLength":1,"maxLength":20},
+  "avatar":{"enum":["sprout","fox","moon","crystal","star","cloud"]},
+  "unlockedLevel":{"type":"integer","minimum":1},
+  "createdAt":{"type":"string","format":"date-time"},"lastPlayed":{"type":"string","format":"date-time"},
+  "levelStats":{"type":"object","additionalProperties":{
+   "type":"object","required":["stars","bestMoves","bestTimeMs","plays"],
+   "properties":{
+    "stars":{"type":"integer","minimum":1,"maximum":3},"bestMoves":{"type":"integer","minimum":0},
+    "bestTimeMs":{"type":["integer","null"],"minimum":0},"lastMoves":{"type":"integer","minimum":0},
+    "lastTimeMs":{"type":"integer","minimum":0},"plays":{"type":"integer","minimum":1},
+    "completedAt":{"type":"string","format":"date-time"},"lastCompletedAt":{"type":"string","format":"date-time"}
+   }
+  }}
+ }
+}

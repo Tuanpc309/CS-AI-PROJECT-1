@@ -1,0 +1,73 @@
+{
+  "counts": {
+    "levels": 43,
+    "runs": 172
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "maps": 6,
+      "tiles_min": 13,
+      "tiles_max": 48,
+      "bfs_length_min": 5,
+      "bfs_length_max": 14,
+      "bfs_length_median": 8.5,
+      "bfs_expanded_min": 10,
+      "bfs_expanded_max": 112,
+      "astar_expanded_min": 8,
+      "astar_expanded_max": 109
+    },
+    {
+      "chapter": 2,
+      "maps": 6,
+      "tiles_min": 58,
+      "tiles_max": 62,
+      "bfs_length_min": 13,
+      "bfs_length_max": 25,
+      "bfs_length_median": 16.5,
+      "bfs_expanded_min": 105,
+      "bfs_expanded_max": 125,
+      "astar_expanded_min": 62,
+      "astar_expanded_max": 96
+    },
+    {
+      "chapter": 3,
+      "maps": 6,
+      "tiles_min": 56,
+      "tiles_max": 57,
+      "bfs_length_min": 15,
+      "bfs_length_max": 29,
+      "bfs_length_median": 20.0,
+      "bfs_expanded_min": 193,
+      "bfs_expanded_max": 220,
+      "astar_expanded_min": 96,
+      "astar_expanded_max": 181
+    },
+    {
+      "chapter": 4,
+      "maps": 6,
+      "tiles_min": 17,
+      "tiles_max": 38,
+      "bfs_length_min": 11,
+      "bfs_length_max": 19,
+      "bfs_length_median": 15.0,
+      "bfs_expanded_min": 133,
+      "bfs_expanded_max": 943,
+      "astar_expanded_min": 56,
+      "astar_expanded_max": 207
+    },
+    {
+      "chapter": 5,
+      "maps": 6,
+      "tiles_min": 44,
+      "tiles_max": 59,
+      "bfs_length_min": 30,
+      "bfs_length_max": 42,
+      "bfs_length_median": 33.5,
+      "bfs_expanded_min": 1738,
+      "bfs_expanded_max": 1812,
+      "astar_expanded_min": 1421,
+      "astar_expanded_max": 1746
+    }
+  ]
+}

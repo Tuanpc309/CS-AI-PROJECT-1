@@ -1,0 +1,59 @@
+name: Test and deploy Bloxorz
+
+on:
+  push:
+    branches: [main, kazu-bloxorz-web]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bloxorz-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install test dependency
+        run: python -m pip install pytest==9.1.1
+      - name: Test Python game
+        run: python -m pytest Source/tests -q
+      - name: Test JavaScript controls and profiles
+        run: node --test Source/tests/*.test.mjs
+      - name: Build static game with Python WASM
+        run: python Source/tools/build_pages.py
+      - name: Replay all 30 levels in WASM
+        run: node Source/tools/smoke_pages.mjs dist
+      - uses: actions/configure-pages@v5
+        if: vars.ENABLE_GITHUB_PAGES == 'true'
+      - uses: actions/upload-pages-artifact@v4
+        if: vars.ENABLE_GITHUB_PAGES == 'true'
+        with:
+          path: dist
+
+  deploy:
+    if: vars.ENABLE_GITHUB_PAGES == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy game
+        id: deployment
+        uses: actions/deploy-pages@v4

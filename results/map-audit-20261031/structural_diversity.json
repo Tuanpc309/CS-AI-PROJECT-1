@@ -1,0 +1,794 @@
+{
+  "records": [
+    {
+      "id": "campaign_01",
+      "group": "campaign",
+      "width": 7,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 5,
+      "tiles": 14,
+      "tile_counts": {
+        ".": 28,
+        "F": 13,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "campaign_02",
+      "group": "campaign",
+      "width": 7,
+      "height": 9,
+      "occupied_height": 7,
+      "occupied_width": 5,
+      "tiles": 33,
+      "tile_counts": {
+        ".": 30,
+        "F": 32,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "campaign_03",
+      "group": "campaign",
+      "width": 11,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 9,
+      "tiles": 35,
+      "tile_counts": {
+        ".": 31,
+        "F": 34,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "campaign_04",
+      "group": "campaign",
+      "width": 7,
+      "height": 5,
+      "occupied_height": 3,
+      "occupied_width": 5,
+      "tiles": 13,
+      "tile_counts": {
+        ".": 22,
+        "F": 12,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "campaign_05",
+      "group": "campaign",
+      "width": 13,
+      "height": 5,
+      "occupied_height": 3,
+      "occupied_width": 11,
+      "tiles": 30,
+      "tile_counts": {
+        ".": 35,
+        "F": 29,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "campaign_06",
+      "group": "campaign",
+      "width": 13,
+      "height": 7,
+      "occupied_height": 5,
+      "occupied_width": 11,
+      "tiles": 48,
+      "tile_counts": {
+        ".": 43,
+        "F": 47,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "campaign_07",
+      "group": "campaign",
+      "width": 12,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 10,
+      "tiles": 61,
+      "tile_counts": {
+        ".": 59,
+        "F": 50,
+        "G": 1,
+        "O": 8,
+        "B": 2
+      },
+      "bridges": 1,
+      "switches": 0
+    },
+    {
+      "id": "campaign_08",
+      "group": "campaign",
+      "width": 12,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 10,
+      "tiles": 59,
+      "tile_counts": {
+        ".": 61,
+        "F": 48,
+        "G": 1,
+        "O": 8,
+        "B": 2
+      },
+      "bridges": 1,
+      "switches": 0
+    },
+    {
+      "id": "campaign_09",
+      "group": "campaign",
+      "width": 12,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 10,
+      "tiles": 58,
+      "tile_counts": {
+        ".": 62,
+        "F": 47,
+        "G": 1,
+        "O": 8,
+        "B": 2
+      },
+      "bridges": 1,
+      "switches": 0
+    },
+    {
+      "id": "campaign_10",
+      "group": "campaign",
+      "width": 12,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 10,
+      "tiles": 62,
+      "tile_counts": {
+        ".": 58,
+        "F": 51,
+        "G": 1,
+        "O": 8,
+        "B": 2
+      },
+      "bridges": 1,
+      "switches": 0
+    },
+    {
+      "id": "campaign_11",
+      "group": "campaign",
+      "width": 12,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 10,
+      "tiles": 59,
+      "tile_counts": {
+        ".": 61,
+        "F": 48,
+        "G": 1,
+        "O": 8,
+        "B": 2
+      },
+      "bridges": 1,
+      "switches": 0
+    },
+    {
+      "id": "campaign_12",
+      "group": "campaign",
+      "width": 12,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 10,
+      "tiles": 58,
+      "tile_counts": {
+        ".": 62,
+        "F": 47,
+        "G": 1,
+        "O": 8,
+        "B": 2
+      },
+      "bridges": 1,
+      "switches": 0
+    },
+    {
+      "id": "campaign_13",
+      "group": "campaign",
+      "width": 15,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 13,
+      "tiles": 57,
+      "tile_counts": {
+        ".": 93,
+        "S": 1,
+        "F": 51,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 2,
+      "switches": 1
+    },
+    {
+      "id": "campaign_14",
+      "group": "campaign",
+      "width": 15,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 13,
+      "tiles": 56,
+      "tile_counts": {
+        ".": 94,
+        "S": 1,
+        "F": 50,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 2,
+      "switches": 1
+    },
+    {
+      "id": "campaign_15",
+      "group": "campaign",
+      "width": 15,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 13,
+      "tiles": 56,
+      "tile_counts": {
+        ".": 94,
+        "S": 1,
+        "F": 50,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 2,
+      "switches": 1
+    },
+    {
+      "id": "campaign_16",
+      "group": "campaign",
+      "width": 15,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 13,
+      "tiles": 56,
+      "tile_counts": {
+        ".": 94,
+        "S": 1,
+        "F": 49,
+        "X": 1,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 2,
+      "switches": 2
+    },
+    {
+      "id": "campaign_17",
+      "group": "campaign",
+      "width": 15,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 13,
+      "tiles": 56,
+      "tile_counts": {
+        ".": 94,
+        "S": 1,
+        "F": 49,
+        "X": 1,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 2,
+      "switches": 2
+    },
+    {
+      "id": "campaign_18",
+      "group": "campaign",
+      "width": 15,
+      "height": 10,
+      "occupied_height": 8,
+      "occupied_width": 13,
+      "tiles": 56,
+      "tile_counts": {
+        ".": 94,
+        "S": 1,
+        "F": 49,
+        "X": 1,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 2,
+      "switches": 2
+    },
+    {
+      "id": "campaign_19",
+      "group": "campaign",
+      "width": 10,
+      "height": 8,
+      "occupied_height": 5,
+      "occupied_width": 8,
+      "tiles": 17,
+      "tile_counts": {
+        ".": 63,
+        "F": 15,
+        "T": 1,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 1
+    },
+    {
+      "id": "campaign_20",
+      "group": "campaign",
+      "width": 11,
+      "height": 8,
+      "occupied_height": 5,
+      "occupied_width": 9,
+      "tiles": 21,
+      "tile_counts": {
+        ".": 67,
+        "F": 19,
+        "T": 1,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 1
+    },
+    {
+      "id": "campaign_21",
+      "group": "campaign",
+      "width": 13,
+      "height": 8,
+      "occupied_height": 5,
+      "occupied_width": 11,
+      "tiles": 27,
+      "tile_counts": {
+        ".": 77,
+        "F": 19,
+        "T": 1,
+        "S": 2,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 3,
+      "switches": 3
+    },
+    {
+      "id": "campaign_22",
+      "group": "campaign",
+      "width": 14,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 12,
+      "tiles": 32,
+      "tile_counts": {
+        ".": 80,
+        "F": 30,
+        "T": 1,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 1
+    },
+    {
+      "id": "campaign_23",
+      "group": "campaign",
+      "width": 14,
+      "height": 8,
+      "occupied_height": 5,
+      "occupied_width": 12,
+      "tiles": 27,
+      "tile_counts": {
+        ".": 85,
+        "F": 25,
+        "T": 1,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 1
+    },
+    {
+      "id": "campaign_24",
+      "group": "campaign",
+      "width": 15,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 13,
+      "tiles": 38,
+      "tile_counts": {
+        ".": 82,
+        "F": 30,
+        "T": 1,
+        "S": 2,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 3,
+      "switches": 3
+    },
+    {
+      "id": "campaign_25",
+      "group": "campaign",
+      "width": 18,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 16,
+      "tiles": 47,
+      "tile_counts": {
+        ".": 97,
+        "F": 26,
+        "T": 1,
+        "S": 2,
+        "B": 8,
+        "X": 1,
+        "O": 8,
+        "G": 1
+      },
+      "bridges": 4,
+      "switches": 4
+    },
+    {
+      "id": "campaign_26",
+      "group": "campaign",
+      "width": 17,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 15,
+      "tiles": 44,
+      "tile_counts": {
+        ".": 92,
+        "F": 23,
+        "T": 1,
+        "S": 2,
+        "B": 8,
+        "X": 1,
+        "O": 8,
+        "G": 1
+      },
+      "bridges": 4,
+      "switches": 4
+    },
+    {
+      "id": "campaign_27",
+      "group": "campaign",
+      "width": 19,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 17,
+      "tiles": 50,
+      "tile_counts": {
+        ".": 102,
+        "F": 29,
+        "T": 1,
+        "S": 2,
+        "B": 8,
+        "X": 1,
+        "O": 8,
+        "G": 1
+      },
+      "bridges": 4,
+      "switches": 4
+    },
+    {
+      "id": "campaign_28",
+      "group": "campaign",
+      "width": 20,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 18,
+      "tiles": 53,
+      "tile_counts": {
+        ".": 107,
+        "F": 32,
+        "T": 1,
+        "S": 2,
+        "B": 8,
+        "X": 1,
+        "O": 8,
+        "G": 1
+      },
+      "bridges": 4,
+      "switches": 4
+    },
+    {
+      "id": "campaign_29",
+      "group": "campaign",
+      "width": 17,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 15,
+      "tiles": 44,
+      "tile_counts": {
+        ".": 92,
+        "F": 23,
+        "T": 1,
+        "S": 2,
+        "B": 8,
+        "X": 1,
+        "O": 8,
+        "G": 1
+      },
+      "bridges": 4,
+      "switches": 4
+    },
+    {
+      "id": "campaign_30",
+      "group": "campaign",
+      "width": 22,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 20,
+      "tiles": 59,
+      "tile_counts": {
+        ".": 117,
+        "F": 38,
+        "T": 1,
+        "S": 2,
+        "B": 8,
+        "O": 8,
+        "X": 1,
+        "G": 1
+      },
+      "bridges": 4,
+      "switches": 4
+    },
+    {
+      "id": "basic_01",
+      "group": "benchmark",
+      "width": 7,
+      "height": 3,
+      "occupied_height": 1,
+      "occupied_width": 5,
+      "tiles": 5,
+      "tile_counts": {
+        ".": 16,
+        "F": 4,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "basic_02",
+      "group": "benchmark",
+      "width": 10,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 8,
+      "tiles": 12,
+      "tile_counts": {
+        ".": 48,
+        "F": 11,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "combined_01",
+      "group": "benchmark",
+      "width": 10,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 10,
+      "tiles": 13,
+      "tile_counts": {
+        ".": 47,
+        "S": 1,
+        "F": 4,
+        "B": 4,
+        "O": 2,
+        "X": 1,
+        "G": 1
+      },
+      "bridges": 2,
+      "switches": 2
+    },
+    {
+      "id": "combined_02",
+      "group": "benchmark",
+      "width": 10,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 9,
+      "tiles": 17,
+      "tile_counts": {
+        ".": 43,
+        "F": 9,
+        "T": 1,
+        "S": 2,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 3,
+      "switches": 3
+    },
+    {
+      "id": "fragile_01",
+      "group": "benchmark",
+      "width": 9,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 7,
+      "tiles": 16,
+      "tile_counts": {
+        ".": 38,
+        "F": 13,
+        "O": 2,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "fragile_02",
+      "group": "benchmark",
+      "width": 10,
+      "height": 5,
+      "occupied_height": 3,
+      "occupied_width": 10,
+      "tiles": 30,
+      "tile_counts": {
+        ".": 20,
+        "F": 23,
+        "O": 6,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "no_solution_01",
+      "group": "benchmark",
+      "width": 8,
+      "height": 4,
+      "occupied_height": 2,
+      "occupied_width": 6,
+      "tiles": 5,
+      "tile_counts": {
+        ".": 27,
+        "F": 4,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    },
+    {
+      "id": "no_solution_02",
+      "group": "benchmark",
+      "width": 10,
+      "height": 7,
+      "occupied_height": 5,
+      "occupied_width": 8,
+      "tiles": 21,
+      "tile_counts": {
+        ".": 49,
+        "F": 16,
+        "S": 1,
+        "B": 2,
+        "X": 1,
+        "G": 1
+      },
+      "bridges": 1,
+      "switches": 2
+    },
+    {
+      "id": "split_01",
+      "group": "benchmark",
+      "width": 9,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 7,
+      "tiles": 14,
+      "tile_counts": {
+        ".": 40,
+        "F": 12,
+        "T": 1,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 1
+    },
+    {
+      "id": "split_02",
+      "group": "benchmark",
+      "width": 9,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 7,
+      "tiles": 17,
+      "tile_counts": {
+        ".": 37,
+        "F": 9,
+        "T": 1,
+        "S": 2,
+        "B": 4,
+        "G": 1
+      },
+      "bridges": 3,
+      "switches": 3
+    },
+    {
+      "id": "switch_01",
+      "group": "benchmark",
+      "width": 9,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 7,
+      "tiles": 10,
+      "tile_counts": {
+        ".": 44,
+        "S": 1,
+        "F": 6,
+        "B": 2,
+        "G": 1
+      },
+      "bridges": 1,
+      "switches": 1
+    },
+    {
+      "id": "switch_02",
+      "group": "benchmark",
+      "width": 9,
+      "height": 6,
+      "occupied_height": 4,
+      "occupied_width": 7,
+      "tiles": 19,
+      "tile_counts": {
+        ".": 35,
+        "F": 15,
+        "X": 1,
+        "B": 2,
+        "G": 1
+      },
+      "bridges": 1,
+      "switches": 1
+    },
+    {
+      "id": "quiet_01",
+      "group": "extra",
+      "width": 10,
+      "height": 8,
+      "occupied_height": 6,
+      "occupied_width": 8,
+      "tiles": 32,
+      "tile_counts": {
+        ".": 48,
+        "F": 31,
+        "G": 1
+      },
+      "bridges": 0,
+      "switches": 0
+    }
+  ],
+  "shape_equivalent_groups": [
+    [
+      "campaign_14",
+      "campaign_15",
+      "campaign_16",
+      "campaign_17"
+    ],
+    [
+      "campaign_26",
+      "campaign_29"
+    ]
+  ],
+  "puzzle_equivalent_groups": [],
+  "unique_shape_count": 39,
+  "unique_puzzle_count": 43
+}

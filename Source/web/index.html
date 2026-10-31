@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d141b">
+  <meta name="description" content="Bloxorz — một khoảng lặng cho những câu đố. Lăn khối, tìm đường, đổi góc nhìn.">
+  <meta name="author" content="Kazu">
+  <title>Bloxorz by Kazu · Một khoảng lặng</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 2 8 4.5v13L12 24l-8-4.5v-13L12 2Z"/><path d="m4 6.5 8 4.5 8-4.5M12 11v13"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="3" width="6" height="6" rx="1.5"/><rect x="3" y="15" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-restart" viewBox="0 0 24 24"><path d="M4 9a8 8 0 1 1 0 7M4 3v6h6"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24"><path d="m9 5-6 6 6 6M3 11h11a6 6 0 0 1 6 6v2"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8V4Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9-6.2-3.3-6.2 3.3L7 14.2 2 9.3l6.9-1L12 2Z"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.2 9a2.8 2.8 0 1 1 4 2.5c-1.2.7-1.2 1.5-1.2 2.5M12 17h.01"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4ZM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="i-muted" viewBox="0 0 24 24"><path d="m11 4-6 5H2v6h3l6 5V4Zm5 5 6 6m0-6-6 6"/></symbol>
+    <symbol id="i-switch" viewBox="0 0 24 24"><path d="M3 7h18l-4-4M21 17H3l4 4M21 7l-4 4M3 17l4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </svg>
+
+  <main class="game-shell" id="game-shell">
+    <header class="masthead">
+      <a class="wordmark" href="./" aria-label="Bloxorz — về màn đầu"><span class="brand-mark"><svg><use href="#i-cube"/></svg></span>bloxorz<span class="brand-dot">.</span></a>
+      <button class="profile-switch glass" id="profile-switch" aria-label="Đổi người chơi"><span id="current-avatar"></span><span id="current-username">Chọn người chơi</span><small>⇄</small></button>
+      <button class="text-button level-menu-button" data-open="levels"><svg><use href="#i-grid"/></svg><span>Màn chơi</span></button>
+    </header>
+
+    <section class="play-area" aria-label="Bàn chơi Bloxorz">
+      <div class="ambient ambient-mint"></div><div class="ambient ambient-blue"></div>
+      <div class="scene-grid" aria-hidden="true"></div>
+      <div class="scene-watermark" aria-hidden="true">BLOXORZ</div>
+
+      <div class="hud">
+        <div class="level-heading"><div class="eyebrow"><span id="level-number">MÀN 01</span><span class="tiny-line"></span><span id="level-category">KHỞI ĐẦU</span></div><h1 id="level-title">Bắt đầu hành trình</h1><button class="passcode" data-open="levels" title="Mở màn bằng passcode"><span>PASSCODE</span><span id="passcode">······</span><svg><use href="#i-arrow"/></svg></button></div>
+        <div class="hud-right">
+          <div class="score-card glass"><div class="moves"><span class="micro-label">BƯỚC ĐI</span><strong id="moves" aria-live="polite" aria-label="Số bước đi">00</strong></div><div class="score-divider"></div><div class="rating"><div class="hud-stars" id="hud-stars" role="img" aria-label="Mục tiêu 3 sao"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><span id="star-target">Đang tính mục tiêu…</span></div></div>
+          <div class="session-buttons"><button id="restart" class="icon-button glass" title="Chơi lại · R" aria-label="Chơi lại màn"><svg><use href="#i-restart"/></svg></button><button id="pause" class="icon-button glass" title="Tạm dừng · Esc" aria-label="Tạm dừng"><svg><use href="#i-pause"/></svg></button></div>
+        </div>
+      </div>
+
+      <canvas id="board" tabindex="0" aria-label="Bàn cờ isometric. Dùng các phím mũi tên hoặc W A S D để lăn khối, Space để đổi khối khi tách.">Trình duyệt cần hỗ trợ Canvas để hiển thị bàn chơi.</canvas>
+      <div class="biome-tag glass"><span class="biome-dot"></span><span id="biome-name">Rừng trên mây</span><span id="biome-progress">1 / 6</span></div>
+      <div class="camera-controls glass" aria-label="Điều khiển camera"><button id="camera-left" aria-label="Xoay camera sang trái" title="Xoay 90 độ">↶</button><button id="camera-reset" aria-label="Đặt lại góc camera" title="Về góc nhìn ban đầu"><span>◇</span><small id="camera-angle">45°</small></button><button id="camera-right" aria-label="Xoay camera sang phải" title="Xoay 90 độ">↷</button></div>
+      <div class="board-caption"><span class="caption-line"></span><p id="level-subtitle">Một khối nhỏ. Một hành trình mới.</p><span class="caption-line"></span></div>
+
+      <div class="bottom-controls">
+        <div class="action-bar glass"><button id="undo" class="undo-button" disabled title="Hoàn tác một bước · Z"><svg><use href="#i-undo"/></svg><span>Hoàn tác</span><span id="undo-badge" class="badge">5</span></button><span class="bar-divider"></span><button id="sound" class="icon-button" aria-label="Bật âm thanh" aria-pressed="false" title="Âm thanh"><svg><use href="#i-muted"/></svg></button><button class="icon-button" data-open="help" aria-label="Hướng dẫn chơi" title="Cách chơi · ?"><svg><use href="#i-help"/></svg></button></div>
+        <button id="solutions" class="solutions-button glass" data-open="solutions" aria-haspopup="dialog"><svg><use href="#i-play"/></svg><span>Lời giải</span><small>BFS · DFS · UCS · A*</small></button>
+        <button id="switch-cube" class="switch-button glass" hidden><svg><use href="#i-switch"/></svg><span>Đổi khối <b id="active-cube">A</b></span><kbd>Space</kbd></button>
+      </div>
+      <div id="replay-controls" class="replay-controls glass" hidden><span id="replay-label" role="status"></span><button id="stop-replay">Dừng phát lại</button></div>
+
+      <div class="direction-control" aria-label="Điều khiển theo góc nhìn isometric"><div class="dpad"><button data-move="UP" class="dpad-up" aria-label="Lăn lên" title="Lên · ↑"><svg><use href="#i-arrow"/></svg></button><button data-move="RIGHT" class="dpad-right" aria-label="Lăn phải" title="Phải · →"><svg><use href="#i-arrow"/></svg></button><button data-move="DOWN" class="dpad-down" aria-label="Lăn xuống" title="Xuống · ↓"><svg><use href="#i-arrow"/></svg></button><button data-move="LEFT" class="dpad-left" aria-label="Lăn trái" title="Trái · ←"><svg><use href="#i-arrow"/></svg></button><span class="dpad-center"></span></div><span class="dpad-caption">LĂN THEO GÓC NHÌN</span></div>
+
+      <div id="connection" class="connection glass" role="status"><span class="loading-dot"></span><span id="connection-text">Đang chuẩn bị bàn chơi…</span><button id="retry" hidden>Thử lại</button></div>
+      <div id="toast" class="toast glass" role="status" hidden></div>
+    </section>
+
+    <footer class="footer"><span class="keyboard-help"><span class="key-group"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></span> theo góc nhìn · Chuột phải để xoay</span><span class="touch-help">1 ngón lăn · 2 ngón xoay góc nhìn</span></footer>
+  </main>
+
+  <section id="profile-screen" class="profile-screen" aria-labelledby="profile-title">
+    <div class="profile-panel">
+      <div class="profile-brand"><svg><use href="#i-cube"/></svg><span>bloxorz.</span><span class="profile-edition">QUIET WORLDS</span></div>
+      <p class="modal-eyebrow">MỖI NGƯỜI, MỘT HÀNH TRÌNH</p>
+      <h1 id="profile-title">Hôm nay, ai sẽ chơi?</h1>
+      <p class="profile-intro">Một khoảng lặng của riêng bạn.<br>Chọn hồ sơ để tiếp tục khám phá.</p>
+      <p id="profile-loading" class="profile-intro" role="status">Đang chuẩn bị bàn chơi…</p>
+      <div id="profile-list" class="profile-list"></div>
+      <p id="profile-empty" class="profile-empty">Chưa có hồ sơ nào. Tạo một người chơi để bắt đầu từ mầm xanh đầu tiên.</p>
+      <button id="add-profile" class="primary-button">＋ Thêm người chơi mới</button>
+      <button id="profile-back" class="secondary-button profile-back" hidden>Trở lại ván đang chơi</button>
+      <p id="profile-error" class="form-error" role="status"></p>
+      <button id="profile-retry" class="secondary-button profile-back" hidden>Kết nối lại</button>
+      <p class="profile-local-note"><span>▧</span> Hồ sơ lưu trên trình duyệt này · Tiến trình riêng cho từng người</p>
+    </div>
+  </section>
+  <dialog id="profile-editor" aria-labelledby="profile-create-title"><div class="modal-content">
+    <p class="modal-eyebrow">MỘT KHỞI ĐẦU NHO NHỎ</p><h2 id="profile-create-title">Người chơi mới</h2>
+    <p class="modal-description">Chọn một gương mặt pixel và tên của bạn.</p>
+    <form id="profile-form"><label class="profile-name-label" for="profile-username">Tên người chơi</label><input id="profile-username" name="username" maxlength="40" autocomplete="nickname" placeholder="Bạn muốn được gọi là…" required>
+      <fieldset class="avatar-fieldset"><legend>Avatar pixel</legend><div id="avatar-choices" class="avatar-choices"></div></fieldset>
+      <p id="profile-create-error" class="form-error" role="status"></p><button type="submit" class="primary-button">Tạo hồ sơ & bắt đầu ↗</button>
+      <button type="button" id="profile-create-cancel" class="secondary-button profile-back">Để sau</button>
+    </form>
+  </div></dialog>
+
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-content" id="modal-content"></div></dialog>
+  <noscript><div class="noscript">Bật JavaScript để chơi Bloxorz.</div></noscript>
+</body>
+</html>

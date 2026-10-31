@@ -1,0 +1,44 @@
+{
+  "id": "campaign_20",
+  "grid": [
+    "...........",
+    ".FFFT......",
+    "....FF.....",
+    "....F......",
+    ".FFFFFFFFG.",
+    ".....FFFFF.",
+    "...........",
+    "..........."
+  ],
+  "start": [
+    1,
+    1
+  ],
+  "goal": [
+    4,
+    9
+  ],
+  "bridges": [],
+  "switches": [
+    {
+      "id": "splitter",
+      "cell": [
+        1,
+        4
+      ],
+      "type": "SPLIT",
+      "effects": [],
+      "destinations": [
+        [
+          4,
+          1
+        ],
+        [
+          2,
+          5
+        ]
+      ]
+    }
+  ],
+  "biomeId": "cavern"
+}

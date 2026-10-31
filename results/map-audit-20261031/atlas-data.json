@@ -1,0 +1,4280 @@
+[
+  {
+    "id": "campaign_01",
+    "number": 1,
+    "title": "Mầm xanh",
+    "collection": "campaign",
+    "chapter": 1,
+    "tile_count": 14,
+    "grid": [
+      ".......",
+      ".FF....",
+      ".FF.F..",
+      ".FF.FF.",
+      ".FFFFG.",
+      "......."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      5
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 11,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 5,
+        "expanded_nodes": 10,
+        "total_time_seconds": 0.0028939999974681996,
+        "peak_memory_bytes": 7992
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 5,
+        "expanded_nodes": 10,
+        "total_time_seconds": 0.002714199996262323,
+        "peak_memory_bytes": 7264
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 5,
+        "expanded_nodes": 10,
+        "total_time_seconds": 0.0033676000020932406,
+        "peak_memory_bytes": 7288
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 5,
+        "expanded_nodes": 8,
+        "total_time_seconds": 0.003078499998082407,
+        "peak_memory_bytes": 13512
+      }
+    }
+  },
+  {
+    "id": "campaign_02",
+    "number": 2,
+    "title": "Nắng qua lá",
+    "collection": "campaign",
+    "chapter": 1,
+    "tile_count": 33,
+    "grid": [
+      ".......",
+      ".FFFFF.",
+      ".FFFFF.",
+      ".FFFFF.",
+      ".FFF.F.",
+      ".FF.FF.",
+      ".FFFFF.",
+      ".FFFFG.",
+      "......."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      7,
+      5
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 83,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 60,
+        "total_time_seconds": 0.01902669999981299,
+        "peak_memory_bytes": 26592
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 20,
+        "expanded_nodes": 21,
+        "total_time_seconds": 0.006225900004210416,
+        "peak_memory_bytes": 16560
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 60,
+        "total_time_seconds": 0.01734310000028927,
+        "peak_memory_bytes": 26792
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 25,
+        "total_time_seconds": 0.011739099994883873,
+        "peak_memory_bytes": 41848
+      }
+    }
+  },
+  {
+    "id": "campaign_03",
+    "number": 3,
+    "title": "Lối rêu",
+    "collection": "campaign",
+    "chapter": 1,
+    "tile_count": 35,
+    "grid": [
+      "...........",
+      ".FFFF.FFFF.",
+      ".FFFFFFFFF.",
+      ".FFFFFFFFF.",
+      ".FFFFFFFFG.",
+      "..........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      9
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 91,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 8,
+        "expanded_nodes": 81,
+        "total_time_seconds": 0.029276200002641417,
+        "peak_memory_bytes": 38944
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 44,
+        "expanded_nodes": 60,
+        "total_time_seconds": 0.023155599999881815,
+        "peak_memory_bytes": 34760
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 8,
+        "expanded_nodes": 81,
+        "total_time_seconds": 0.030409899998630863,
+        "peak_memory_bytes": 34944
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 8,
+        "expanded_nodes": 38,
+        "total_time_seconds": 0.013170699996408075,
+        "peak_memory_bytes": 44536
+      }
+    }
+  },
+  {
+    "id": "campaign_04",
+    "number": 4,
+    "title": "Đảo nhỏ",
+    "collection": "campaign",
+    "chapter": 1,
+    "tile_count": 13,
+    "grid": [
+      ".......",
+      ".FFF...",
+      ".FFFFF.",
+      ".FFFFG.",
+      "......."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      3,
+      5
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 31,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 9,
+        "expanded_nodes": 28,
+        "total_time_seconds": 0.00803549999545794,
+        "peak_memory_bytes": 16216
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 17,
+        "total_time_seconds": 0.004273300000932068,
+        "peak_memory_bytes": 12968
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 9,
+        "expanded_nodes": 28,
+        "total_time_seconds": 0.007501700005377643,
+        "peak_memory_bytes": 14576
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 9,
+        "expanded_nodes": 25,
+        "total_time_seconds": 0.007880500001192559,
+        "peak_memory_bytes": 17264
+      }
+    }
+  },
+  {
+    "id": "campaign_05",
+    "number": 5,
+    "title": "Khúc quanh",
+    "collection": "campaign",
+    "chapter": 1,
+    "tile_count": 30,
+    "grid": [
+      ".............",
+      ".FFFFFFFFFFF.",
+      ".FFFFFFF.FFF.",
+      ".FFF.F.FFFFG.",
+      "............."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      3,
+      11
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 71,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 59,
+        "total_time_seconds": 0.017479699999967124,
+        "peak_memory_bytes": 24528
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 15,
+        "total_time_seconds": 0.0036158000002615154,
+        "peak_memory_bytes": 11800
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 59,
+        "total_time_seconds": 0.018086300005961675,
+        "peak_memory_bytes": 24264
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 45,
+        "total_time_seconds": 0.014460400001553353,
+        "peak_memory_bytes": 34120
+      }
+    }
+  },
+  {
+    "id": "campaign_06",
+    "number": 6,
+    "title": "Tán rừng",
+    "collection": "campaign",
+    "chapter": 1,
+    "tile_count": 48,
+    "grid": [
+      ".............",
+      ".FF.FF.FFFFF.",
+      ".FFFFF.FFFFF.",
+      ".FFFFFFFFF.F.",
+      ".FFFFFFFF.FF.",
+      ".FFFFFF..FFG.",
+      "............."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      5,
+      11
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 114,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 14,
+        "expanded_nodes": 112,
+        "total_time_seconds": 0.03188070000032894,
+        "peak_memory_bytes": 43760
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 34,
+        "expanded_nodes": 44,
+        "total_time_seconds": 0.01246520000131568,
+        "peak_memory_bytes": 24416
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 14,
+        "expanded_nodes": 112,
+        "total_time_seconds": 0.040225299999292474,
+        "peak_memory_bytes": 39088
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 14,
+        "expanded_nodes": 109,
+        "total_time_seconds": 0.03611269999964861,
+        "peak_memory_bytes": 57304
+      }
+    }
+  },
+  {
+    "id": "campaign_07",
+    "number": 7,
+    "title": "Gạch hoàng hôn",
+    "collection": "campaign",
+    "chapter": 2,
+    "tile_count": 61,
+    "grid": [
+      "............",
+      ".F.F....FFF.",
+      ".FFF....FFF.",
+      ".FFF....FFG.",
+      ".FFFF..FFFF.",
+      ".FFFF..FFFF.",
+      ".FFFF..FFFF.",
+      ".FFOOOOBFFF.",
+      ".FFOOOOBFFF.",
+      "............"
+    ],
+    "start": [
+      4,
+      1
+    ],
+    "goal": [
+      3,
+      10
+    ],
+    "bridges": [
+      {
+        "id": "cloud_walk",
+        "cells": [
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [],
+    "reachable": 148,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 109,
+        "total_time_seconds": 0.03614209999796003,
+        "peak_memory_bytes": 52040
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 32,
+        "expanded_nodes": 56,
+        "total_time_seconds": 0.016288699996948708,
+        "peak_memory_bytes": 29288
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 109,
+        "total_time_seconds": 0.03983910000533797,
+        "peak_memory_bytes": 48552
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 64,
+        "total_time_seconds": 0.02462750000267988,
+        "peak_memory_bytes": 73848
+      }
+    }
+  },
+  {
+    "id": "campaign_08",
+    "number": 8,
+    "title": "Mây qua cầu",
+    "collection": "campaign",
+    "chapter": 2,
+    "tile_count": 59,
+    "grid": [
+      "............",
+      ".FFF....FF..",
+      ".F.F....FFG.",
+      ".FFF....FFF.",
+      ".FFFF..FFFF.",
+      ".FFFF..FFFF.",
+      ".F.FF..FFFF.",
+      ".FFOOOOBFFF.",
+      ".FFOOOOBFFF.",
+      "............"
+    ],
+    "start": [
+      3,
+      1
+    ],
+    "goal": [
+      2,
+      10
+    ],
+    "bridges": [
+      {
+        "id": "cloud_walk",
+        "cells": [
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [],
+    "reachable": 136,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 112,
+        "total_time_seconds": 0.038584499998250976,
+        "peak_memory_bytes": 52784
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 40,
+        "expanded_nodes": 98,
+        "total_time_seconds": 0.030069799999182578,
+        "peak_memory_bytes": 48584
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 112,
+        "total_time_seconds": 0.03988270000263583,
+        "peak_memory_bytes": 49264
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 62,
+        "total_time_seconds": 0.03242150000005495,
+        "peak_memory_bytes": 69400
+      }
+    }
+  },
+  {
+    "id": "campaign_09",
+    "number": 9,
+    "title": "Dải hổ phách",
+    "collection": "campaign",
+    "chapter": 2,
+    "tile_count": 58,
+    "grid": [
+      "............",
+      ".FFF....F.F.",
+      ".FFF....FFG.",
+      ".FFF....FF..",
+      ".FFFF..FFFF.",
+      ".F.FF..FFF..",
+      ".FFFF..FFFF.",
+      ".FFOOOOBFFF.",
+      ".FFOOOOBFFF.",
+      "............"
+    ],
+    "start": [
+      4,
+      1
+    ],
+    "goal": [
+      2,
+      10
+    ],
+    "bridges": [
+      {
+        "id": "cloud_walk",
+        "cells": [
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [],
+    "reachable": 133,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 116,
+        "total_time_seconds": 0.03903580000041984,
+        "peak_memory_bytes": 51792
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 43,
+        "expanded_nodes": 89,
+        "total_time_seconds": 0.030070699998759665,
+        "peak_memory_bytes": 47096
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 116,
+        "total_time_seconds": 0.043268900000839494,
+        "peak_memory_bytes": 47600
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 84,
+        "total_time_seconds": 0.050217299998621456,
+        "peak_memory_bytes": 66920
+      }
+    }
+  },
+  {
+    "id": "campaign_10",
+    "number": 10,
+    "title": "Bước chân nhẹ",
+    "collection": "campaign",
+    "chapter": 2,
+    "tile_count": 62,
+    "grid": [
+      "............",
+      ".FFF....FFF.",
+      ".FFF....FFG.",
+      ".FFF....FFF.",
+      ".FFFF..FFFF.",
+      ".FFFF..FFFF.",
+      ".FFFF..FFFF.",
+      ".FFOOOOBFFF.",
+      ".FFOOOOBFFF.",
+      "............"
+    ],
+    "start": [
+      1,
+      2
+    ],
+    "goal": [
+      2,
+      10
+    ],
+    "bridges": [
+      {
+        "id": "cloud_walk",
+        "cells": [
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [],
+    "reachable": 152,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 17,
+        "expanded_nodes": 125,
+        "total_time_seconds": 0.0424741000024369,
+        "peak_memory_bytes": 56752
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 71,
+        "expanded_nodes": 90,
+        "total_time_seconds": 0.03597349999472499,
+        "peak_memory_bytes": 51872
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 17,
+        "expanded_nodes": 125,
+        "total_time_seconds": 0.04796619999979157,
+        "peak_memory_bytes": 53392
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 17,
+        "expanded_nodes": 91,
+        "total_time_seconds": 0.03099389999988489,
+        "peak_memory_bytes": 75080
+      }
+    }
+  },
+  {
+    "id": "campaign_11",
+    "number": 11,
+    "title": "Đền mây",
+    "collection": "campaign",
+    "chapter": 2,
+    "tile_count": 59,
+    "grid": [
+      "............",
+      ".F.F....FFF.",
+      ".FFF....FGF.",
+      ".F.F....FFF.",
+      ".FFFF..FFFF.",
+      ".FFFF..FFFF.",
+      ".FFFF..FF.F.",
+      ".FFOOOOBFFF.",
+      ".FFOOOOBFFF.",
+      "............"
+    ],
+    "start": [
+      2,
+      1
+    ],
+    "goal": [
+      2,
+      9
+    ],
+    "bridges": [
+      {
+        "id": "cloud_walk",
+        "cells": [
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [],
+    "reachable": 137,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 19,
+        "expanded_nodes": 105,
+        "total_time_seconds": 0.03524509999988368,
+        "peak_memory_bytes": 50368
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 43,
+        "expanded_nodes": 83,
+        "total_time_seconds": 0.023652099996979814,
+        "peak_memory_bytes": 45608
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 19,
+        "expanded_nodes": 105,
+        "total_time_seconds": 0.03345420000550803,
+        "peak_memory_bytes": 46560
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 19,
+        "expanded_nodes": 96,
+        "total_time_seconds": 0.035719999999855645,
+        "peak_memory_bytes": 70424
+      }
+    }
+  },
+  {
+    "id": "campaign_12",
+    "number": 12,
+    "title": "Sau ánh chiều",
+    "collection": "campaign",
+    "chapter": 2,
+    "tile_count": 58,
+    "grid": [
+      "............",
+      ".FFF....FFG.",
+      ".FFF....FFF.",
+      ".FFF....FFF.",
+      ".F.FF..FFFF.",
+      "...FF..FFFF.",
+      ".FFFF..FF.F.",
+      ".FFOOOOBFFF.",
+      ".FFOOOOBFFF.",
+      "............"
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      1,
+      10
+    ],
+    "bridges": [
+      {
+        "id": "cloud_walk",
+        "cells": [
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [],
+    "reachable": 134,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 25,
+        "expanded_nodes": 113,
+        "total_time_seconds": 0.03218219999689609,
+        "peak_memory_bytes": 51112
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 27,
+        "expanded_nodes": 67,
+        "total_time_seconds": 0.019918999998481013,
+        "peak_memory_bytes": 36672
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 25,
+        "expanded_nodes": 113,
+        "total_time_seconds": 0.035765900000114925,
+        "peak_memory_bytes": 47112
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 25,
+        "expanded_nodes": 90,
+        "total_time_seconds": 0.026494799996726215,
+        "peak_memory_bytes": 66072
+      }
+    }
+  },
+  {
+    "id": "campaign_13",
+    "number": 13,
+    "title": "Tín hiệu đầu",
+    "collection": "campaign",
+    "chapter": 3,
+    "tile_count": 57,
+    "grid": [
+      "...............",
+      ".SFF......F....",
+      ".FFF......F....",
+      ".F........F....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF..F.",
+      ".FFFFBBFFFFBBG.",
+      ".FFFF..FFFF..F.",
+      "..............."
+    ],
+    "start": [
+      6,
+      1
+    ],
+    "goal": [
+      7,
+      13
+    ],
+    "bridges": [
+      {
+        "id": "entry_bridge",
+        "cells": [
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "exit_bridge",
+        "cells": [
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_entry",
+        "cell": [
+          1,
+          1
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "entry_bridge",
+            "operation": "TOGGLE"
+          },
+          {
+            "bridge_id": "exit_bridge",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 247,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 220,
+        "total_time_seconds": 0.0797623999969801,
+        "peak_memory_bytes": 87800
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 54,
+        "expanded_nodes": 102,
+        "total_time_seconds": 0.04409820000000764,
+        "peak_memory_bytes": 56256
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 220,
+        "total_time_seconds": 0.07458670000050915,
+        "peak_memory_bytes": 88800
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 96,
+        "total_time_seconds": 0.03314980000141077,
+        "peak_memory_bytes": 61432
+      }
+    }
+  },
+  {
+    "id": "campaign_14",
+    "number": 14,
+    "title": "Đèn qua mưa",
+    "collection": "campaign",
+    "chapter": 3,
+    "tile_count": 56,
+    "grid": [
+      "...............",
+      ".SFF......F....",
+      ".FFF......F....",
+      ".F........F....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF..F.",
+      ".FFFFBBFFFFBBG.",
+      ".F.FF..FFFF..F.",
+      "..............."
+    ],
+    "start": [
+      7,
+      1
+    ],
+    "goal": [
+      7,
+      13
+    ],
+    "bridges": [
+      {
+        "id": "entry_bridge",
+        "cells": [
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "exit_bridge",
+        "cells": [
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_entry",
+        "cell": [
+          1,
+          1
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "entry_bridge",
+            "operation": "TOGGLE"
+          },
+          {
+            "bridge_id": "exit_bridge",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 235,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 214,
+        "total_time_seconds": 0.06373449999955483,
+        "peak_memory_bytes": 86264
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 56,
+        "expanded_nodes": 72,
+        "total_time_seconds": 0.028626100000110455,
+        "peak_memory_bytes": 48064
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 214,
+        "total_time_seconds": 0.08728379999956815,
+        "peak_memory_bytes": 87328
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 100,
+        "total_time_seconds": 0.0609251000059885,
+        "peak_memory_bytes": 59848
+      }
+    }
+  },
+  {
+    "id": "campaign_15",
+    "number": 15,
+    "title": "Một kết nối",
+    "collection": "campaign",
+    "chapter": 3,
+    "tile_count": 56,
+    "grid": [
+      "...............",
+      ".SFF......F....",
+      ".FFF......F....",
+      ".F........F....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF..F.",
+      ".FFFFBBFFFFBBG.",
+      ".F.FF..FFFF..F.",
+      "..............."
+    ],
+    "start": [
+      7,
+      2
+    ],
+    "goal": [
+      7,
+      13
+    ],
+    "bridges": [
+      {
+        "id": "entry_bridge",
+        "cells": [
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "exit_bridge",
+        "cells": [
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_entry",
+        "cell": [
+          1,
+          1
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "entry_bridge",
+            "operation": "TOGGLE"
+          },
+          {
+            "bridge_id": "exit_bridge",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 235,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 17,
+        "expanded_nodes": 214,
+        "total_time_seconds": 0.06784210000478197,
+        "peak_memory_bytes": 86264
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 55,
+        "expanded_nodes": 73,
+        "total_time_seconds": 0.023978199998964556,
+        "peak_memory_bytes": 48832
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 17,
+        "expanded_nodes": 214,
+        "total_time_seconds": 0.0658253999936278,
+        "peak_memory_bytes": 87328
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 17,
+        "expanded_nodes": 99,
+        "total_time_seconds": 0.038390800000343006,
+        "peak_memory_bytes": 59624
+      }
+    }
+  },
+  {
+    "id": "campaign_16",
+    "number": 16,
+    "title": "Hai tín hiệu",
+    "collection": "campaign",
+    "chapter": 3,
+    "tile_count": 56,
+    "grid": [
+      "...............",
+      ".SFF......X....",
+      ".FFF......F....",
+      ".F........F....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF..F.",
+      ".FFFFBBFFFFBBG.",
+      ".F.FF..FFFF..F.",
+      "..............."
+    ],
+    "start": [
+      6,
+      1
+    ],
+    "goal": [
+      7,
+      13
+    ],
+    "bridges": [
+      {
+        "id": "entry_bridge",
+        "cells": [
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "exit_bridge",
+        "cells": [
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_entry",
+        "cell": [
+          1,
+          1
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "entry_bridge",
+            "operation": "TOGGLE"
+          }
+        ]
+      },
+      {
+        "id": "heavy_exit",
+        "cell": [
+          1,
+          10
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "exit_bridge",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 357,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 23,
+        "expanded_nodes": 195,
+        "total_time_seconds": 0.061883500005933456,
+        "peak_memory_bytes": 80392
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 41,
+        "expanded_nodes": 276,
+        "total_time_seconds": 0.08327429999917513,
+        "peak_memory_bytes": 104920
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 23,
+        "expanded_nodes": 195,
+        "total_time_seconds": 0.06686269999772776,
+        "peak_memory_bytes": 81136
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 23,
+        "expanded_nodes": 181,
+        "total_time_seconds": 0.06449009999778355,
+        "peak_memory_bytes": 81968
+      }
+    }
+  },
+  {
+    "id": "campaign_17",
+    "number": 17,
+    "title": "Mạch sáng",
+    "collection": "campaign",
+    "chapter": 3,
+    "tile_count": 56,
+    "grid": [
+      "...............",
+      ".SFF......X....",
+      ".FFF......F....",
+      ".F........F....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF....",
+      ".FFFF..FFFF..F.",
+      ".FFFFBBFFFFBBG.",
+      ".F.FF..FFFF..F.",
+      "..............."
+    ],
+    "start": [
+      7,
+      1
+    ],
+    "goal": [
+      7,
+      13
+    ],
+    "bridges": [
+      {
+        "id": "entry_bridge",
+        "cells": [
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "exit_bridge",
+        "cells": [
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_entry",
+        "cell": [
+          1,
+          1
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "entry_bridge",
+            "operation": "TOGGLE"
+          }
+        ]
+      },
+      {
+        "id": "heavy_exit",
+        "cell": [
+          1,
+          10
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "exit_bridge",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 357,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 24,
+        "expanded_nodes": 195,
+        "total_time_seconds": 0.06529949999821838,
+        "peak_memory_bytes": 80392
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 44,
+        "expanded_nodes": 310,
+        "total_time_seconds": 0.11212009999871952,
+        "peak_memory_bytes": 136776
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 24,
+        "expanded_nodes": 195,
+        "total_time_seconds": 0.06564500000240514,
+        "peak_memory_bytes": 81136
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 24,
+        "expanded_nodes": 181,
+        "total_time_seconds": 0.0602327000015066,
+        "peak_memory_bytes": 82016
+      }
+    }
+  },
+  {
+    "id": "campaign_18",
+    "number": 18,
+    "title": "Giao lộ đêm",
+    "collection": "campaign",
+    "chapter": 3,
+    "tile_count": 56,
+    "grid": [
+      "...............",
+      ".SFF......X....",
+      ".FFF......F....",
+      ".F........F....",
+      ".FFFF..FFFF....",
+      ".F.FF..FFFF....",
+      ".FFFF..FFFF..F.",
+      ".FFFFBBFFFFBBG.",
+      ".FFFF..FFFF..F.",
+      "..............."
+    ],
+    "start": [
+      7,
+      2
+    ],
+    "goal": [
+      7,
+      13
+    ],
+    "bridges": [
+      {
+        "id": "entry_bridge",
+        "cells": [
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "exit_bridge",
+        "cells": [
+          [
+            7,
+            11
+          ],
+          [
+            7,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_entry",
+        "cell": [
+          1,
+          1
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "entry_bridge",
+            "operation": "TOGGLE"
+          }
+        ]
+      },
+      {
+        "id": "heavy_exit",
+        "cell": [
+          1,
+          10
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "exit_bridge",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 353,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 29,
+        "expanded_nodes": 193,
+        "total_time_seconds": 0.059873400001379196,
+        "peak_memory_bytes": 79880
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 68,
+        "expanded_nodes": 265,
+        "total_time_seconds": 0.0772039000003133,
+        "peak_memory_bytes": 102560
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 29,
+        "expanded_nodes": 193,
+        "total_time_seconds": 0.06402550000348128,
+        "peak_memory_bytes": 80624
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 29,
+        "expanded_nodes": 179,
+        "total_time_seconds": 0.08813530000043102,
+        "peak_memory_bytes": 81608
+      }
+    }
+  },
+  {
+    "id": "campaign_19",
+    "number": 19,
+    "title": "Hai mảnh pha lê",
+    "collection": "campaign",
+    "chapter": 4,
+    "tile_count": 17,
+    "grid": [
+      "..........",
+      ".FFFT.....",
+      "....FF....",
+      "....F.....",
+      ".FFFFFFFG.",
+      ".......FF.",
+      "..........",
+      ".........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      8
+    ],
+    "bridges": [],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      }
+    ],
+    "reachable": 502,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 133,
+        "total_time_seconds": 0.04172200000175508,
+        "peak_memory_bytes": 55312
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 94,
+        "expanded_nodes": 136,
+        "total_time_seconds": 0.0425013999993098,
+        "peak_memory_bytes": 70688
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 133,
+        "total_time_seconds": 0.04269139999814797,
+        "peak_memory_bytes": 52912
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 56,
+        "total_time_seconds": 0.018250300003273878,
+        "peak_memory_bytes": 32040
+      }
+    }
+  },
+  {
+    "id": "campaign_20",
+    "number": 20,
+    "title": "Tiếng vọng",
+    "collection": "campaign",
+    "chapter": 4,
+    "tile_count": 21,
+    "grid": [
+      "...........",
+      ".FFFT......",
+      "....FF.....",
+      "....F......",
+      ".FFFFFFFFG.",
+      ".....FFFFF.",
+      "...........",
+      "..........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      9
+    ],
+    "bridges": [],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      }
+    ],
+    "reachable": 787,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 261,
+        "total_time_seconds": 0.08065970000461675,
+        "peak_memory_bytes": 120072
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 53,
+        "expanded_nodes": 79,
+        "total_time_seconds": 0.021754600005806424,
+        "peak_memory_bytes": 46304
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 261,
+        "total_time_seconds": 0.0975315000032424,
+        "peak_memory_bytes": 98268
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 13,
+        "expanded_nodes": 108,
+        "total_time_seconds": 0.03692569999839179,
+        "peak_memory_bytes": 51088
+      }
+    }
+  },
+  {
+    "id": "campaign_21",
+    "number": 21,
+    "title": "Hai bờ",
+    "collection": "campaign",
+    "chapter": 4,
+    "tile_count": 27,
+    "grid": [
+      ".............",
+      ".FFFT........",
+      "....FSBF.....",
+      "....B.F......",
+      ".FBSBFFFFFFG.",
+      "......FFFFFF.",
+      ".............",
+      "............."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      11
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            4,
+            2
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          3
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 1222,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 246,
+        "total_time_seconds": 0.08068230000208132,
+        "peak_memory_bytes": 150312
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 165,
+        "expanded_nodes": 275,
+        "total_time_seconds": 0.10208869999769377,
+        "peak_memory_bytes": 179040
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 246,
+        "total_time_seconds": 0.1167286999989301,
+        "peak_memory_bytes": 131892
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 74,
+        "total_time_seconds": 0.023185599995485973,
+        "peak_memory_bytes": 58504
+      }
+    }
+  },
+  {
+    "id": "campaign_22",
+    "number": 22,
+    "title": "Đường hội ngộ",
+    "collection": "campaign",
+    "chapter": 4,
+    "tile_count": 32,
+    "grid": [
+      "..............",
+      ".FFFT.........",
+      "....FF........",
+      "....F.........",
+      ".FFFFFFFFFFFG.",
+      "......FFFFFFF.",
+      "......FFFFFF..",
+      ".............."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      12
+    ],
+    "bridges": [],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      }
+    ],
+    "reachable": 1888,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 492,
+        "total_time_seconds": 0.18907990000298014,
+        "peak_memory_bytes": 183392
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 22,
+        "expanded_nodes": 63,
+        "total_time_seconds": 0.024781800006167032,
+        "peak_memory_bytes": 26776
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 492,
+        "total_time_seconds": 0.18277239999588346,
+        "peak_memory_bytes": 179928
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 15,
+        "expanded_nodes": 123,
+        "total_time_seconds": 0.04566710000653984,
+        "peak_memory_bytes": 71448
+      }
+    }
+  },
+  {
+    "id": "campaign_23",
+    "number": 23,
+    "title": "Hồ ký ức",
+    "collection": "campaign",
+    "chapter": 4,
+    "tile_count": 27,
+    "grid": [
+      "..............",
+      ".FFFT.........",
+      "....FF........",
+      "....F.........",
+      ".FFFFFFFFFFFF.",
+      ".....FFFFFFFG.",
+      "..............",
+      ".............."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      5,
+      12
+    ],
+    "bridges": [],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      }
+    ],
+    "reachable": 1330,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 539,
+        "total_time_seconds": 0.18137279999791645,
+        "peak_memory_bytes": 187616
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 64,
+        "expanded_nodes": 94,
+        "total_time_seconds": 0.03154519999952754,
+        "peak_memory_bytes": 52224
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 539,
+        "total_time_seconds": 0.19911639999918407,
+        "peak_memory_bytes": 182444
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 141,
+        "total_time_seconds": 0.043421299997135065,
+        "peak_memory_bytes": 70008
+      }
+    }
+  },
+  {
+    "id": "campaign_24",
+    "number": 24,
+    "title": "Hợp âm",
+    "collection": "campaign",
+    "chapter": 4,
+    "tile_count": 38,
+    "grid": [
+      "...............",
+      ".FFFT..........",
+      "....FSBF.......",
+      "....B.F........",
+      ".FBSBFFFFFFFFF.",
+      "......FFFFFFFG.",
+      "......FFFFFFF..",
+      "..............."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      5,
+      13
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            4,
+            2
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          3
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 2540,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 19,
+        "expanded_nodes": 943,
+        "total_time_seconds": 0.3151189000054728,
+        "peak_memory_bytes": 409920
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 172,
+        "expanded_nodes": 357,
+        "total_time_seconds": 0.1217017000017222,
+        "peak_memory_bytes": 211688
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 19,
+        "expanded_nodes": 943,
+        "total_time_seconds": 0.40658260000054725,
+        "peak_memory_bytes": 434644
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 19,
+        "expanded_nodes": 207,
+        "total_time_seconds": 0.07277270000486169,
+        "peak_memory_bytes": 127296
+      }
+    }
+  },
+  {
+    "id": "campaign_25",
+    "number": 25,
+    "title": "Quỹ đạo",
+    "collection": "campaign",
+    "chapter": 5,
+    "tile_count": 47,
+    "grid": [
+      "..................",
+      ".FFFT.............",
+      "....FSBFBF........",
+      "....B.............",
+      ".FSBXFFOOOOBBFFFF.",
+      "....FFFOOOOBBFFFF.",
+      "....FFF......FFFG.",
+      ".................."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      6,
+      16
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            2,
+            8
+          ]
+        ],
+        "initial_enabled": true
+      },
+      {
+        "id": "stellar_exit",
+        "cells": [
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "stellar_signal",
+        "cell": [
+          4,
+          4
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "stellar_exit",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 1792,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 30,
+        "expanded_nodes": 1749,
+        "total_time_seconds": 0.6467721000008169,
+        "peak_memory_bytes": 689064
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 83,
+        "expanded_nodes": 309,
+        "total_time_seconds": 0.09963960000459338,
+        "peak_memory_bytes": 156544
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 30,
+        "expanded_nodes": 1749,
+        "total_time_seconds": 0.6047083000012208,
+        "peak_memory_bytes": 630488
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 30,
+        "expanded_nodes": 1421,
+        "total_time_seconds": 0.5345297999956529,
+        "peak_memory_bytes": 659008
+      }
+    }
+  },
+  {
+    "id": "campaign_26",
+    "number": 26,
+    "title": "Bản đồ sao",
+    "collection": "campaign",
+    "chapter": 5,
+    "tile_count": 44,
+    "grid": [
+      ".................",
+      ".FFFT............",
+      "....FSBFBF.......",
+      "....B............",
+      ".FSBFXFOOOOBBFFF.",
+      "....FFFOOOOBBFFF.",
+      "....FFF......FFG.",
+      "................."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      6,
+      15
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            2,
+            8
+          ]
+        ],
+        "initial_enabled": true
+      },
+      {
+        "id": "stellar_exit",
+        "cells": [
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "stellar_signal",
+        "cell": [
+          4,
+          5
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "stellar_exit",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 1778,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 32,
+        "expanded_nodes": 1738,
+        "total_time_seconds": 0.6052444999950239,
+        "peak_memory_bytes": 685480
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 93,
+        "expanded_nodes": 275,
+        "total_time_seconds": 0.08252899999934016,
+        "peak_memory_bytes": 154248
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 32,
+        "expanded_nodes": 1738,
+        "total_time_seconds": 0.8020921999996062,
+        "peak_memory_bytes": 626504
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 32,
+        "expanded_nodes": 1658,
+        "total_time_seconds": 0.7797922999961884,
+        "peak_memory_bytes": 687964
+      }
+    }
+  },
+  {
+    "id": "campaign_27",
+    "number": 27,
+    "title": "Điểm giao",
+    "collection": "campaign",
+    "chapter": 5,
+    "tile_count": 50,
+    "grid": [
+      "...................",
+      ".FFFT..............",
+      "....FSBFBF.........",
+      "....B..............",
+      ".FSBXFFOOOOBBFFFFG.",
+      "....FFFOOOOBBFFFFF.",
+      "....FFF......FFFFF.",
+      "..................."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      17
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            2,
+            8
+          ]
+        ],
+        "initial_enabled": true
+      },
+      {
+        "id": "stellar_exit",
+        "cells": [
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "stellar_signal",
+        "cell": [
+          4,
+          4
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "stellar_exit",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 1806,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 33,
+        "expanded_nodes": 1787,
+        "total_time_seconds": 0.7340752999953111,
+        "peak_memory_bytes": 698800
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 90,
+        "expanded_nodes": 314,
+        "total_time_seconds": 0.10108329999638954,
+        "peak_memory_bytes": 159320
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 33,
+        "expanded_nodes": 1787,
+        "total_time_seconds": 0.61581920000026,
+        "peak_memory_bytes": 640256
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 33,
+        "expanded_nodes": 1732,
+        "total_time_seconds": 0.6018995000049472,
+        "peak_memory_bytes": 695084
+      }
+    }
+  },
+  {
+    "id": "campaign_28",
+    "number": 28,
+    "title": "Vòng thiên thể",
+    "collection": "campaign",
+    "chapter": 5,
+    "tile_count": 53,
+    "grid": [
+      "....................",
+      ".FFFT...............",
+      "....FSBFBF..........",
+      "....B...............",
+      ".FSBFFXOOOOBBFFFFFF.",
+      "....FFFOOOOBBFFFFFG.",
+      "....FFF......FFFFFF.",
+      "...................."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      5,
+      18
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            2,
+            8
+          ]
+        ],
+        "initial_enabled": true
+      },
+      {
+        "id": "stellar_exit",
+        "cells": [
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "stellar_signal",
+        "cell": [
+          4,
+          6
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "stellar_exit",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 1820,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 34,
+        "expanded_nodes": 1769,
+        "total_time_seconds": 0.6078224000011687,
+        "peak_memory_bytes": 695632
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 103,
+        "expanded_nodes": 303,
+        "total_time_seconds": 0.09411220000038156,
+        "peak_memory_bytes": 157088
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 34,
+        "expanded_nodes": 1769,
+        "total_time_seconds": 0.6092209999987972,
+        "peak_memory_bytes": 637492
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 34,
+        "expanded_nodes": 1660,
+        "total_time_seconds": 0.609196500001417,
+        "peak_memory_bytes": 690476
+      }
+    }
+  },
+  {
+    "id": "campaign_29",
+    "number": 29,
+    "title": "Mê cung tĩnh",
+    "collection": "campaign",
+    "chapter": 5,
+    "tile_count": 44,
+    "grid": [
+      ".................",
+      ".FFFT............",
+      "....FSBFBF.......",
+      "....B............",
+      ".FSBFXFOOOOBBFFG.",
+      "....FFFOOOOBBFFF.",
+      "....FFF......FFF.",
+      "................."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      15
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            2,
+            8
+          ]
+        ],
+        "initial_enabled": true
+      },
+      {
+        "id": "stellar_exit",
+        "cells": [
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "stellar_signal",
+        "cell": [
+          4,
+          5
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "stellar_exit",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 1778,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 36,
+        "expanded_nodes": 1766,
+        "total_time_seconds": 0.596565500003635,
+        "peak_memory_bytes": 691744
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 89,
+        "expanded_nodes": 271,
+        "total_time_seconds": 0.08736330000101589,
+        "peak_memory_bytes": 137104
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 36,
+        "expanded_nodes": 1766,
+        "total_time_seconds": 0.8009887000007438,
+        "peak_memory_bytes": 632584
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 36,
+        "expanded_nodes": 1746,
+        "total_time_seconds": 0.6552330999984406,
+        "peak_memory_bytes": 693600
+      }
+    }
+  },
+  {
+    "id": "campaign_30",
+    "number": 30,
+    "title": "Qua miền sao",
+    "collection": "campaign",
+    "chapter": 5,
+    "tile_count": 59,
+    "grid": [
+      "......................",
+      ".FFFT.................",
+      "....FSBFBF............",
+      "....B.................",
+      ".FSBFFFOOOOBBFFFFFFFF.",
+      "....FXFOOOOBBFFFFFFFG.",
+      "....FFF......FFFFFFFF.",
+      "......................"
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      5,
+      20
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            2,
+            8
+          ]
+        ],
+        "initial_enabled": true
+      },
+      {
+        "id": "stellar_exit",
+        "cells": [
+          [
+            4,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "stellar_signal",
+        "cell": [
+          5,
+          5
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "stellar_exit",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 1848,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 42,
+        "expanded_nodes": 1812,
+        "total_time_seconds": 0.7990623000005144,
+        "peak_memory_bytes": 706776
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 116,
+        "expanded_nodes": 335,
+        "total_time_seconds": 0.10650289999466622,
+        "peak_memory_bytes": 166688
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 42,
+        "expanded_nodes": 1812,
+        "total_time_seconds": 0.638724500000535,
+        "peak_memory_bytes": 648848
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 42,
+        "expanded_nodes": 1739,
+        "total_time_seconds": 0.5982424999965588,
+        "peak_memory_bytes": 702796
+      }
+    }
+  },
+  {
+    "id": "quiet_01",
+    "number": 1,
+    "title": "Khoảng lặng",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 32,
+    "grid": [
+      "..........",
+      "......FFF.",
+      "....FFFFG.",
+      "..FFFFFFF.",
+      ".FFFFFFF..",
+      ".FFFFFF...",
+      ".FFFF.....",
+      ".........."
+    ],
+    "start": [
+      5,
+      1
+    ],
+    "goal": [
+      2,
+      8
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 82,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 73,
+        "total_time_seconds": 0.01982760000100825,
+        "peak_memory_bytes": 35136
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 24,
+        "expanded_nodes": 41,
+        "total_time_seconds": 0.009836800003540702,
+        "peak_memory_bytes": 24216
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 73,
+        "total_time_seconds": 0.02066499999637017,
+        "peak_memory_bytes": 28904
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 22,
+        "total_time_seconds": 0.00784890000068117,
+        "peak_memory_bytes": 36120
+      }
+    }
+  },
+  {
+    "id": "basic_01",
+    "number": 2,
+    "title": "Bước đầu tiên",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 5,
+    "grid": [
+      ".......",
+      ".FFFGF.",
+      "......."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      1,
+      4
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 3,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 2,
+        "expanded_nodes": 2,
+        "total_time_seconds": 0.0005450000026030466,
+        "peak_memory_bytes": 4512
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 2,
+        "expanded_nodes": 2,
+        "total_time_seconds": 0.0009157000022241846,
+        "peak_memory_bytes": 3848
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 2,
+        "expanded_nodes": 2,
+        "total_time_seconds": 0.0005829000001540408,
+        "peak_memory_bytes": 3816
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 2,
+        "expanded_nodes": 2,
+        "total_time_seconds": 0.0007802999971318059,
+        "peak_memory_bytes": 5264
+      }
+    }
+  },
+  {
+    "id": "basic_02",
+    "number": 3,
+    "title": "Qua khúc quanh",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 12,
+    "grid": [
+      "..........",
+      ".FFFF.....",
+      "....FF....",
+      "....FF....",
+      ".....FFFG.",
+      ".........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      8
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 8,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 7,
+        "total_time_seconds": 0.002401699995971285,
+        "peak_memory_bytes": 6712
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 7,
+        "total_time_seconds": 0.001825999999709893,
+        "peak_memory_bytes": 6048
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 7,
+        "total_time_seconds": 0.00221130000136327,
+        "peak_memory_bytes": 5632
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 7,
+        "expanded_nodes": 7,
+        "total_time_seconds": 0.003148199997667689,
+        "peak_memory_bytes": 9912
+      }
+    }
+  },
+  {
+    "id": "fragile_01",
+    "number": 4,
+    "title": "Khẽ chạm",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 16,
+    "grid": [
+      ".........",
+      ".FOOFFFG.",
+      "..FFF....",
+      "..FFF....",
+      "..FFF....",
+      "........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      1,
+      7
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 32,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 4,
+        "expanded_nodes": 13,
+        "total_time_seconds": 0.004041400003188755,
+        "peak_memory_bytes": 10064
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 4,
+        "expanded_nodes": 31,
+        "total_time_seconds": 0.009831400006078184,
+        "peak_memory_bytes": 16224
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 4,
+        "expanded_nodes": 13,
+        "total_time_seconds": 0.0036528999989968725,
+        "peak_memory_bytes": 9648
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 4,
+        "expanded_nodes": 4,
+        "total_time_seconds": 0.001538500000606291,
+        "peak_memory_bytes": 17512
+      }
+    }
+  },
+  {
+    "id": "fragile_02",
+    "number": 5,
+    "title": "Đường vòng",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 30,
+    "grid": [
+      "..........",
+      "FOOFOOFOOG",
+      "FFFFFFFFFF",
+      "FFFFFFFFFF",
+      ".........."
+    ],
+    "start": [
+      1,
+      0
+    ],
+    "goal": [
+      1,
+      9
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 71,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 6,
+        "expanded_nodes": 30,
+        "total_time_seconds": 0.011173699997016229,
+        "peak_memory_bytes": 18568
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 30,
+        "expanded_nodes": 48,
+        "total_time_seconds": 0.012050000004819594,
+        "peak_memory_bytes": 23952
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 6,
+        "expanded_nodes": 30,
+        "total_time_seconds": 0.00854839999374235,
+        "peak_memory_bytes": 17464
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 6,
+        "expanded_nodes": 6,
+        "total_time_seconds": 0.0022889000028953888,
+        "peak_memory_bytes": 37576
+      }
+    }
+  },
+  {
+    "id": "switch_01",
+    "number": 6,
+    "title": "Một kết nối",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 10,
+    "grid": [
+      ".........",
+      ".S.......",
+      ".F.......",
+      ".F.......",
+      ".FFFFBBG.",
+      "........."
+    ],
+    "start": [
+      4,
+      1
+    ],
+    "goal": [
+      4,
+      7
+    ],
+    "bridges": [
+      {
+        "id": "gate",
+        "cells": [
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_gate",
+        "cell": [
+          1,
+          1
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "gate",
+            "operation": "TOGGLE"
+          }
+        ]
+      }
+    ],
+    "reachable": 12,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 8,
+        "expanded_nodes": 11,
+        "total_time_seconds": 0.002737300004810095,
+        "peak_memory_bytes": 8552
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 8,
+        "expanded_nodes": 9,
+        "total_time_seconds": 0.0020978000029572286,
+        "peak_memory_bytes": 7520
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 8,
+        "expanded_nodes": 11,
+        "total_time_seconds": 0.0026735999999800697,
+        "peak_memory_bytes": 7752
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 8,
+        "expanded_nodes": 10,
+        "total_time_seconds": 0.002862900000764057,
+        "peak_memory_bytes": 10024
+      }
+    }
+  },
+  {
+    "id": "switch_02",
+    "number": 7,
+    "title": "Điểm tựa",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 19,
+    "grid": [
+      ".........",
+      ".FFFXBBG.",
+      ".FFFF....",
+      ".FFFF....",
+      ".FFFF....",
+      "........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      1,
+      7
+    ],
+    "bridges": [
+      {
+        "id": "gate",
+        "cells": [
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "heavy_gate",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "gate",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 85,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 4,
+        "expanded_nodes": 31,
+        "total_time_seconds": 0.01019320000341395,
+        "peak_memory_bytes": 23328
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 24,
+        "expanded_nodes": 73,
+        "total_time_seconds": 0.022791099996538833,
+        "peak_memory_bytes": 38008
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 4,
+        "expanded_nodes": 31,
+        "total_time_seconds": 0.009125799995672423,
+        "peak_memory_bytes": 23960
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 4,
+        "expanded_nodes": 4,
+        "total_time_seconds": 0.0018660000059753656,
+        "peak_memory_bytes": 23144
+      }
+    }
+  },
+  {
+    "id": "split_01",
+    "number": 8,
+    "title": "Hai nửa",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 14,
+    "grid": [
+      ".........",
+      ".FFFT....",
+      "....FF...",
+      "....F....",
+      ".FFFFFFG.",
+      "........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      7
+    ],
+    "bridges": [],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            5
+          ]
+        ]
+      }
+    ],
+    "reachable": 337,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 106,
+        "total_time_seconds": 0.0274344999997993,
+        "peak_memory_bytes": 46840
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 14,
+        "total_time_seconds": 0.0037929999962216243,
+        "peak_memory_bytes": 12512
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 106,
+        "total_time_seconds": 0.03529240000352729,
+        "peak_memory_bytes": 43608
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 11,
+        "expanded_nodes": 69,
+        "total_time_seconds": 0.019256100000347942,
+        "peak_memory_bytes": 38464
+      }
+    }
+  },
+  {
+    "id": "split_02",
+    "number": 9,
+    "title": "Đồng điệu",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 17,
+    "grid": [
+      ".........",
+      ".FFFT....",
+      "....FSBF.",
+      "....B.F..",
+      ".FBSBFFG.",
+      "........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      7
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            4,
+            2
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            7
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          3
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 436,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 14,
+        "expanded_nodes": 139,
+        "total_time_seconds": 0.04169539999566041,
+        "peak_memory_bytes": 79024
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 129,
+        "expanded_nodes": 197,
+        "total_time_seconds": 0.06127079999714624,
+        "peak_memory_bytes": 108600
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 14,
+        "expanded_nodes": 139,
+        "total_time_seconds": 0.04242510000040056,
+        "peak_memory_bytes": 81848
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 14,
+        "expanded_nodes": 91,
+        "total_time_seconds": 0.030416600005992223,
+        "peak_memory_bytes": 59240
+      }
+    }
+  },
+  {
+    "id": "combined_01",
+    "number": 10,
+    "title": "Giao điểm",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 13,
+    "grid": [
+      "..........",
+      "S.........",
+      "F.........",
+      "F.........",
+      "FBBFOOXBBG",
+      ".........."
+    ],
+    "start": [
+      4,
+      0
+    ],
+    "goal": [
+      4,
+      9
+    ],
+    "bridges": [
+      {
+        "id": "entry_gate",
+        "cells": [
+          [
+            4,
+            1
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "exit_gate",
+        "cells": [
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_entry",
+        "cell": [
+          1,
+          0
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "entry_gate",
+            "operation": "TOGGLE"
+          }
+        ]
+      },
+      {
+        "id": "heavy_exit",
+        "cell": [
+          4,
+          6
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "exit_gate",
+            "operation": "SET_OPEN"
+          }
+        ]
+      }
+    ],
+    "reachable": 21,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 10,
+        "expanded_nodes": 13,
+        "total_time_seconds": 0.003686500000185333,
+        "peak_memory_bytes": 10608
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 10,
+        "expanded_nodes": 20,
+        "total_time_seconds": 0.005841399994096719,
+        "peak_memory_bytes": 13816
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 10,
+        "expanded_nodes": 13,
+        "total_time_seconds": 0.003241799997340422,
+        "peak_memory_bytes": 9968
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 10,
+        "expanded_nodes": 10,
+        "total_time_seconds": 0.0032205000024987385,
+        "peak_memory_bytes": 11624
+      }
+    }
+  },
+  {
+    "id": "combined_02",
+    "number": 11,
+    "title": "Hợp nhất",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 17,
+    "grid": [
+      "..........",
+      ".FFFT.....",
+      "....FSBFBF",
+      "....B.....",
+      ".FSBFFG...",
+      ".........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      4,
+      6
+    ],
+    "bridges": [
+      {
+        "id": "a_access",
+        "cells": [
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            3
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "b_access",
+        "cells": [
+          [
+            2,
+            6
+          ]
+        ],
+        "initial_enabled": false
+      },
+      {
+        "id": "return_gate",
+        "cells": [
+          [
+            2,
+            8
+          ]
+        ],
+        "initial_enabled": true
+      }
+    ],
+    "switches": [
+      {
+        "id": "splitter",
+        "cell": [
+          1,
+          4
+        ],
+        "type": "SPLIT",
+        "effects": [],
+        "destinations": [
+          [
+            4,
+            1
+          ],
+          [
+            2,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "a_button",
+        "cell": [
+          4,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "b_access",
+            "operation": "SET_OPEN"
+          }
+        ]
+      },
+      {
+        "id": "b_button",
+        "cell": [
+          2,
+          5
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "a_access",
+            "operation": "SET_OPEN"
+          },
+          {
+            "bridge_id": "return_gate",
+            "operation": "SET_CLOSED"
+          }
+        ]
+      }
+    ],
+    "reachable": 446,
+    "results": {
+      "BFS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 173,
+        "total_time_seconds": 0.06613199999992503,
+        "peak_memory_bytes": 84200
+      },
+      "DFS": {
+        "status": "FOUND",
+        "solution_length": 47,
+        "expanded_nodes": 90,
+        "total_time_seconds": 0.026390399994852487,
+        "peak_memory_bytes": 54656
+      },
+      "UCS": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 173,
+        "total_time_seconds": 0.05679010000312701,
+        "peak_memory_bytes": 85904
+      },
+      "ASTAR": {
+        "status": "FOUND",
+        "solution_length": 16,
+        "expanded_nodes": 115,
+        "total_time_seconds": 0.04786669999884907,
+        "peak_memory_bytes": 67432
+      }
+    }
+  },
+  {
+    "id": "no_solution_01",
+    "number": 12,
+    "title": "Đảo xa",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 5,
+    "grid": [
+      "........",
+      ".FFFF...",
+      "......G.",
+      "........"
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      2,
+      6
+    ],
+    "bridges": [],
+    "switches": [],
+    "reachable": 3,
+    "results": {
+      "BFS": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 3,
+        "total_time_seconds": 0.0007358000002568588,
+        "peak_memory_bytes": 4632
+      },
+      "DFS": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 3,
+        "total_time_seconds": 0.0007442999994964339,
+        "peak_memory_bytes": 4008
+      },
+      "UCS": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 3,
+        "total_time_seconds": 0.0008124000014504418,
+        "peak_memory_bytes": 3936
+      },
+      "ASTAR": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 3,
+        "total_time_seconds": 0.0010484999947948381,
+        "peak_memory_bytes": 5144
+      }
+    }
+  },
+  {
+    "id": "no_solution_02",
+    "number": 13,
+    "title": "Vòng lặp",
+    "collection": "extra",
+    "chapter": null,
+    "tile_count": 21,
+    "grid": [
+      "..........",
+      ".FSFFF....",
+      ".FFFBF....",
+      ".FFFBF....",
+      ".FFFXF....",
+      "........G.",
+      ".........."
+    ],
+    "start": [
+      1,
+      1
+    ],
+    "goal": [
+      5,
+      8
+    ],
+    "bridges": [
+      {
+        "id": "gate",
+        "cells": [
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "initial_enabled": false
+      }
+    ],
+    "switches": [
+      {
+        "id": "soft_gate",
+        "cell": [
+          1,
+          2
+        ],
+        "type": "SOFT",
+        "effects": [
+          {
+            "bridge_id": "gate",
+            "operation": "TOGGLE"
+          }
+        ]
+      },
+      {
+        "id": "heavy_gate",
+        "cell": [
+          4,
+          4
+        ],
+        "type": "HEAVY",
+        "effects": [
+          {
+            "bridge_id": "gate",
+            "operation": "TOGGLE"
+          }
+        ]
+      }
+    ],
+    "reachable": 89,
+    "results": {
+      "BFS": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 89,
+        "total_time_seconds": 0.03981990000465885,
+        "peak_memory_bytes": 43112
+      },
+      "DFS": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 89,
+        "total_time_seconds": 0.02879899999970803,
+        "peak_memory_bytes": 41968
+      },
+      "UCS": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 89,
+        "total_time_seconds": 0.030302700004540384,
+        "peak_memory_bytes": 39080
+      },
+      "ASTAR": {
+        "status": "NO_SOLUTION",
+        "solution_length": null,
+        "expanded_nodes": 89,
+        "total_time_seconds": 0.03383239999675425,
+        "peak_memory_bytes": 42664
+      }
+    }
+  }
+]

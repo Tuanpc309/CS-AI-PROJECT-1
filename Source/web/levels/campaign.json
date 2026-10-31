@@ -1,0 +1,488 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": "campaign_01",
+      "file": "campaign_01.json",
+      "title": "Mầm xanh",
+      "subtitle": "Lăn khối giữa những tán cây. Đứng thẳng vào ô đích.",
+      "difficulty": 1,
+      "difficultyLabel": "Làm quen",
+      "mechanics": [
+        "floor"
+      ],
+      "biomeId": "forest",
+      "chapter": 1,
+      "chapterLevel": 1
+    },
+    {
+      "id": "campaign_02",
+      "file": "campaign_02.json",
+      "title": "Nắng qua lá",
+      "subtitle": "Lăn khối giữa những tán cây. Đứng thẳng vào ô đích.",
+      "difficulty": 1,
+      "difficultyLabel": "Làm quen",
+      "mechanics": [
+        "floor"
+      ],
+      "biomeId": "forest",
+      "chapter": 1,
+      "chapterLevel": 2
+    },
+    {
+      "id": "campaign_03",
+      "file": "campaign_03.json",
+      "title": "Lối rêu",
+      "subtitle": "Lăn khối giữa những tán cây. Đứng thẳng vào ô đích.",
+      "difficulty": 1,
+      "difficultyLabel": "Làm quen",
+      "mechanics": [
+        "floor"
+      ],
+      "biomeId": "forest",
+      "chapter": 1,
+      "chapterLevel": 3
+    },
+    {
+      "id": "campaign_04",
+      "file": "campaign_04.json",
+      "title": "Đảo nhỏ",
+      "subtitle": "Lăn khối giữa những tán cây. Đứng thẳng vào ô đích.",
+      "difficulty": 1,
+      "difficultyLabel": "Làm quen",
+      "mechanics": [
+        "floor"
+      ],
+      "biomeId": "forest",
+      "chapter": 1,
+      "chapterLevel": 4
+    },
+    {
+      "id": "campaign_05",
+      "file": "campaign_05.json",
+      "title": "Khúc quanh",
+      "subtitle": "Lăn khối giữa những tán cây. Đứng thẳng vào ô đích.",
+      "difficulty": 1,
+      "difficultyLabel": "Làm quen",
+      "mechanics": [
+        "floor"
+      ],
+      "biomeId": "forest",
+      "chapter": 1,
+      "chapterLevel": 5
+    },
+    {
+      "id": "campaign_06",
+      "file": "campaign_06.json",
+      "title": "Tán rừng",
+      "subtitle": "Lăn khối giữa những tán cây. Đứng thẳng vào ô đích.",
+      "difficulty": 1,
+      "difficultyLabel": "Làm quen",
+      "mechanics": [
+        "floor"
+      ],
+      "biomeId": "forest",
+      "chapter": 1,
+      "chapterLevel": 6
+    },
+    {
+      "id": "campaign_07",
+      "file": "campaign_07.json",
+      "title": "Gạch hoàng hôn",
+      "subtitle": "Nằm xuống trên gạch cam, căn lại tư thế qua những cây cầu hẹp.",
+      "difficulty": 2,
+      "difficultyLabel": "Căn tư thế",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "narrow-bridge"
+      ],
+      "biomeId": "dusk",
+      "chapter": 2,
+      "chapterLevel": 1
+    },
+    {
+      "id": "campaign_08",
+      "file": "campaign_08.json",
+      "title": "Mây qua cầu",
+      "subtitle": "Nằm xuống trên gạch cam, căn lại tư thế qua những cây cầu hẹp.",
+      "difficulty": 2,
+      "difficultyLabel": "Căn tư thế",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "narrow-bridge"
+      ],
+      "biomeId": "dusk",
+      "chapter": 2,
+      "chapterLevel": 2
+    },
+    {
+      "id": "campaign_09",
+      "file": "campaign_09.json",
+      "title": "Dải hổ phách",
+      "subtitle": "Nằm xuống trên gạch cam, căn lại tư thế qua những cây cầu hẹp.",
+      "difficulty": 2,
+      "difficultyLabel": "Căn tư thế",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "narrow-bridge"
+      ],
+      "biomeId": "dusk",
+      "chapter": 2,
+      "chapterLevel": 3
+    },
+    {
+      "id": "campaign_10",
+      "file": "campaign_10.json",
+      "title": "Bước chân nhẹ",
+      "subtitle": "Nằm xuống trên gạch cam, căn lại tư thế qua những cây cầu hẹp.",
+      "difficulty": 2,
+      "difficultyLabel": "Căn tư thế",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "narrow-bridge"
+      ],
+      "biomeId": "dusk",
+      "chapter": 2,
+      "chapterLevel": 4
+    },
+    {
+      "id": "campaign_11",
+      "file": "campaign_11.json",
+      "title": "Đền mây",
+      "subtitle": "Nằm xuống trên gạch cam, căn lại tư thế qua những cây cầu hẹp.",
+      "difficulty": 2,
+      "difficultyLabel": "Căn tư thế",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "narrow-bridge"
+      ],
+      "biomeId": "dusk",
+      "chapter": 2,
+      "chapterLevel": 5
+    },
+    {
+      "id": "campaign_12",
+      "file": "campaign_12.json",
+      "title": "Sau ánh chiều",
+      "subtitle": "Nằm xuống trên gạch cam, căn lại tư thế qua những cây cầu hẹp.",
+      "difficulty": 2,
+      "difficultyLabel": "Căn tư thế",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "narrow-bridge"
+      ],
+      "biomeId": "dusk",
+      "chapter": 2,
+      "chapterLevel": 6
+    },
+    {
+      "id": "campaign_13",
+      "file": "campaign_13.json",
+      "title": "Tín hiệu đầu",
+      "subtitle": "Theo các tín hiệu: nút tròn nhận mọi tư thế, nút X cần đứng thẳng.",
+      "difficulty": 3,
+      "difficultyLabel": "Kết nối",
+      "mechanics": [
+        "floor",
+        "soft-switch",
+        "bridge"
+      ],
+      "biomeId": "neon",
+      "chapter": 3,
+      "chapterLevel": 1
+    },
+    {
+      "id": "campaign_14",
+      "file": "campaign_14.json",
+      "title": "Đèn qua mưa",
+      "subtitle": "Theo các tín hiệu: nút tròn nhận mọi tư thế, nút X cần đứng thẳng.",
+      "difficulty": 3,
+      "difficultyLabel": "Kết nối",
+      "mechanics": [
+        "floor",
+        "soft-switch",
+        "bridge"
+      ],
+      "biomeId": "neon",
+      "chapter": 3,
+      "chapterLevel": 2
+    },
+    {
+      "id": "campaign_15",
+      "file": "campaign_15.json",
+      "title": "Một kết nối",
+      "subtitle": "Theo các tín hiệu: nút tròn nhận mọi tư thế, nút X cần đứng thẳng.",
+      "difficulty": 3,
+      "difficultyLabel": "Kết nối",
+      "mechanics": [
+        "floor",
+        "soft-switch",
+        "bridge"
+      ],
+      "biomeId": "neon",
+      "chapter": 3,
+      "chapterLevel": 3
+    },
+    {
+      "id": "campaign_16",
+      "file": "campaign_16.json",
+      "title": "Hai tín hiệu",
+      "subtitle": "Theo các tín hiệu: nút tròn nhận mọi tư thế, nút X cần đứng thẳng.",
+      "difficulty": 3,
+      "difficultyLabel": "Kết nối",
+      "mechanics": [
+        "floor",
+        "soft-switch",
+        "bridge",
+        "heavy-switch"
+      ],
+      "biomeId": "neon",
+      "chapter": 3,
+      "chapterLevel": 4
+    },
+    {
+      "id": "campaign_17",
+      "file": "campaign_17.json",
+      "title": "Mạch sáng",
+      "subtitle": "Theo các tín hiệu: nút tròn nhận mọi tư thế, nút X cần đứng thẳng.",
+      "difficulty": 3,
+      "difficultyLabel": "Kết nối",
+      "mechanics": [
+        "floor",
+        "soft-switch",
+        "bridge",
+        "heavy-switch"
+      ],
+      "biomeId": "neon",
+      "chapter": 3,
+      "chapterLevel": 5
+    },
+    {
+      "id": "campaign_18",
+      "file": "campaign_18.json",
+      "title": "Giao lộ đêm",
+      "subtitle": "Theo các tín hiệu: nút tròn nhận mọi tư thế, nút X cần đứng thẳng.",
+      "difficulty": 3,
+      "difficultyLabel": "Kết nối",
+      "mechanics": [
+        "floor",
+        "soft-switch",
+        "bridge",
+        "heavy-switch"
+      ],
+      "biomeId": "neon",
+      "chapter": 3,
+      "chapterLevel": 6
+    },
+    {
+      "id": "campaign_19",
+      "file": "campaign_19.json",
+      "title": "Hai mảnh pha lê",
+      "subtitle": "Hai nửa, hai con đường. Đổi khối bằng Space rồi tìm nơi hội ngộ.",
+      "difficulty": 4,
+      "difficultyLabel": "Phân mảnh",
+      "mechanics": [
+        "floor",
+        "split"
+      ],
+      "biomeId": "cavern",
+      "chapter": 4,
+      "chapterLevel": 1
+    },
+    {
+      "id": "campaign_20",
+      "file": "campaign_20.json",
+      "title": "Tiếng vọng",
+      "subtitle": "Hai nửa, hai con đường. Đổi khối bằng Space rồi tìm nơi hội ngộ.",
+      "difficulty": 4,
+      "difficultyLabel": "Phân mảnh",
+      "mechanics": [
+        "floor",
+        "split"
+      ],
+      "biomeId": "cavern",
+      "chapter": 4,
+      "chapterLevel": 2
+    },
+    {
+      "id": "campaign_21",
+      "file": "campaign_21.json",
+      "title": "Hai bờ",
+      "subtitle": "Hai nửa, hai con đường. Đổi khối bằng Space rồi tìm nơi hội ngộ.",
+      "difficulty": 4,
+      "difficultyLabel": "Phân mảnh",
+      "mechanics": [
+        "floor",
+        "split"
+      ],
+      "biomeId": "cavern",
+      "chapter": 4,
+      "chapterLevel": 3
+    },
+    {
+      "id": "campaign_22",
+      "file": "campaign_22.json",
+      "title": "Đường hội ngộ",
+      "subtitle": "Hai nửa, hai con đường. Đổi khối bằng Space rồi tìm nơi hội ngộ.",
+      "difficulty": 4,
+      "difficultyLabel": "Phân mảnh",
+      "mechanics": [
+        "floor",
+        "split"
+      ],
+      "biomeId": "cavern",
+      "chapter": 4,
+      "chapterLevel": 4
+    },
+    {
+      "id": "campaign_23",
+      "file": "campaign_23.json",
+      "title": "Hồ ký ức",
+      "subtitle": "Hai nửa, hai con đường. Đổi khối bằng Space rồi tìm nơi hội ngộ.",
+      "difficulty": 4,
+      "difficultyLabel": "Phân mảnh",
+      "mechanics": [
+        "floor",
+        "split"
+      ],
+      "biomeId": "cavern",
+      "chapter": 4,
+      "chapterLevel": 5
+    },
+    {
+      "id": "campaign_24",
+      "file": "campaign_24.json",
+      "title": "Hợp âm",
+      "subtitle": "Hai nửa, hai con đường. Đổi khối bằng Space rồi tìm nơi hội ngộ.",
+      "difficulty": 4,
+      "difficultyLabel": "Phân mảnh",
+      "mechanics": [
+        "floor",
+        "split"
+      ],
+      "biomeId": "cavern",
+      "chapter": 4,
+      "chapterLevel": 6
+    },
+    {
+      "id": "campaign_25",
+      "file": "campaign_25.json",
+      "title": "Quỹ đạo",
+      "subtitle": "Kết hợp những điều đã học: tách khối, công tắc, cầu và gạch cam.",
+      "difficulty": 5,
+      "difficultyLabel": "Tổng hợp",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "split",
+        "soft-switch",
+        "heavy-switch",
+        "bridge"
+      ],
+      "biomeId": "celestial",
+      "chapter": 5,
+      "chapterLevel": 1
+    },
+    {
+      "id": "campaign_26",
+      "file": "campaign_26.json",
+      "title": "Bản đồ sao",
+      "subtitle": "Kết hợp những điều đã học: tách khối, công tắc, cầu và gạch cam.",
+      "difficulty": 5,
+      "difficultyLabel": "Tổng hợp",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "split",
+        "soft-switch",
+        "heavy-switch",
+        "bridge"
+      ],
+      "biomeId": "celestial",
+      "chapter": 5,
+      "chapterLevel": 2
+    },
+    {
+      "id": "campaign_27",
+      "file": "campaign_27.json",
+      "title": "Điểm giao",
+      "subtitle": "Kết hợp những điều đã học: tách khối, công tắc, cầu và gạch cam.",
+      "difficulty": 5,
+      "difficultyLabel": "Tổng hợp",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "split",
+        "soft-switch",
+        "heavy-switch",
+        "bridge"
+      ],
+      "biomeId": "celestial",
+      "chapter": 5,
+      "chapterLevel": 3
+    },
+    {
+      "id": "campaign_28",
+      "file": "campaign_28.json",
+      "title": "Vòng thiên thể",
+      "subtitle": "Kết hợp những điều đã học: tách khối, công tắc, cầu và gạch cam.",
+      "difficulty": 5,
+      "difficultyLabel": "Tổng hợp",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "split",
+        "soft-switch",
+        "heavy-switch",
+        "bridge"
+      ],
+      "biomeId": "celestial",
+      "chapter": 5,
+      "chapterLevel": 4
+    },
+    {
+      "id": "campaign_29",
+      "file": "campaign_29.json",
+      "title": "Mê cung tĩnh",
+      "subtitle": "Kết hợp những điều đã học: tách khối, công tắc, cầu và gạch cam.",
+      "difficulty": 5,
+      "difficultyLabel": "Tổng hợp",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "split",
+        "soft-switch",
+        "heavy-switch",
+        "bridge"
+      ],
+      "biomeId": "celestial",
+      "chapter": 5,
+      "chapterLevel": 5
+    },
+    {
+      "id": "campaign_30",
+      "file": "campaign_30.json",
+      "title": "Qua miền sao",
+      "subtitle": "Kết hợp những điều đã học: tách khối, công tắc, cầu và gạch cam.",
+      "difficulty": 5,
+      "difficultyLabel": "Tổng hợp",
+      "mechanics": [
+        "floor",
+        "fragile",
+        "split",
+        "soft-switch",
+        "heavy-switch",
+        "bridge"
+      ],
+      "biomeId": "celestial",
+      "chapter": 5,
+      "chapterLevel": 6
+    }
+  ]
+}
