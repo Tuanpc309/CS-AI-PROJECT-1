@@ -42,6 +42,7 @@ for key, proof in json.loads(_proofs).items():
 
 first = call('/api/session', dict(level='basic_01'))['body']
 second = call('/api/session', dict(level='basic_01'))['body']
+assert first['solver']['can_cancel'] is False
 token = first['session']
 assert token != second['session']
 assert command(token, 'move', action='RIGHT')['moves'] == 1
@@ -58,6 +59,59 @@ assert call('/api/session', dict(level=[]))['status'] == 400
 assert call('/api/command', dict(command='load', level=[]), token)['status'] == 400
 assert call('/api/session', [])['status'] == 400
 assert call('/api/missing', {})['status'] == 404
+
+# The same protocol now exposes each real Python solver, not prebuilt witnesses.
+command(token, 'move', action='RIGHT')
+memory_modes = {}
+for algorithm in ('BFS', 'DFS', 'UCS', 'ASTAR'):
+    state = command(token, 'solve', algorithm=algorithm, cost_policy='UNIT')
+    result = state['solver']['results'][algorithm + ':UNIT']
+    assert not state['solver']['busy'], state
+    assert state['solver']['can_cancel'] is False, state
+    assert result['status'] == 'FOUND', result
+    assert result['actions'] == ['RIGHT'], result
+    assert result['solution_length'] == result['solution_cost'] == 1
+    assert state['solver']['origin_moves'] == 1
+    assert result['metadata']['replay_verified'] is True
+    memory_modes[algorithm] = result['metadata']['memory_available']
+    if not result['metadata']['memory_available']:
+        assert result['peak_memory_bytes'] is None
+    state = command(token, 'replay_start', algorithm=algorithm, cost_policy='UNIT')
+    assert state['moves'] == 1
+    while state['replay']['active']:
+        state = command(token, 'replay_step')
+    assert state['phase'] == 'WON' and state['moves'] == 2
+assert len(state['solver']['results']) == 4
+
+weighted = call('/api/session', dict(level='fragile_02'))['body']['session']
+for algorithm in ('UCS', 'ASTAR'):
+    state = command(weighted, 'solve', algorithm=algorithm, cost_policy='FRAGILE_PENALTY')
+    result = state['solver']['results'][algorithm + ':FRAGILE_PENALTY']
+    assert result['status'] == 'FOUND', result
+    assert result['solution_cost'] == result['solution_length'] == 11, result
+    state = command(weighted, 'replay_start', algorithm=algorithm, cost_policy='FRAGILE_PENALTY')
+    while state['replay']['active']:
+        state = command(weighted, 'replay_step')
+    assert state['phase'] == 'WON'
+
+split = call('/api/session', dict(level='split_02'))['body']['session']
+state = command(split, 'solve', algorithm='ASTAR')
+assert state['solver']['results']['ASTAR:UNIT']['selection_count'] >= 2
+state = command(split, 'replay_start', algorithm='ASTAR')
+while state['replay']['active']:
+    state = command(split, 'replay_step')
+assert state['phase'] == 'WON'
+
+unsolvable = call('/api/session', dict(level='no_solution_02'))['body']['session']
+state = command(unsolvable, 'solve', algorithm='BFS')
+assert state['solver']['results']['BFS:UNIT']['status'] == 'NO_SOLUTION'
+assert state['solver']['results']['BFS:UNIT']['solution_length'] is None
+limited = call('/api/session', dict(level='basic_01'))['body']['session']
+state = command(limited, 'solve', algorithm='BFS', time_limit_seconds=0)
+assert state['solver']['results']['BFS:UNIT']['status'] == 'TIMEOUT'
+state = command(limited, 'solve', algorithm='BFS', memory_limit_bytes=0)
+assert state['solver']['results']['BFS:UNIT']['status'] == 'MEMORY_LIMIT'
+print('WASM solver memory availability:', json.dumps(memory_modes, sort_keys=True))
 `);
-  console.log('Pages WASM smoke: 30 optimal wins, split/switch/fragile/bridge rules, session isolation, pause, undo, restart and invalid requests passed.');
+  console.log('Pages WASM smoke: 30 optimal wins, rules/session/undo checks, all four solvers from current state, retained results, replay, weighted cost, no-solution and budget statuses passed.');
 }catch(error){console.error(error.message);process.exitCode=1;}

@@ -7,6 +7,12 @@ HUD số bước và sao, passcode, Pause/Restart, Undo 5 lần, D-pad xoay 45°
 vuốt theo góc nhìn, modal thắng/thua và chọn màn. Luật chơi vẫn chạy bằng
 engine Python hiện tại; Three.js được lưu cùng source, không cần Node.js/npm để chơi.
 
+Bản hiện tại lấy giao diện nhánh `kazu-bloxorz-web` làm nền, thu gọn HUD và
+khoảng cách. Nút **Lời giải** mở bảng BFS/DFS/UCS/A*, chuỗi bước có thứ tự,
+giải thích cách tìm đường, số liệu đo và phát lại. Có thể chạy cả bốn từ cùng
+snapshot, đổi UNIT/FRAGILE_PENALTY và xem lại từng kết quả. Chi tiết ở
+[hướng dẫn lời giải](web/README.md#lời-giải-bfs-dfs-ucs-a).
+
 Từ thư mục chứa `Source`:
 
 ```powershell
@@ -33,7 +39,7 @@ hồ sơ local theo trình duyệt, chưa đồng bộ cloud. Đọc
 [cấu trúc hồ sơ và hook VFX](web/PROFILES-AND-VFX.md) để tích hợp thêm.
 
 `Khoảng lặng` và 12 màn benchmark nằm trong mục bổ sung. Bộ Python đã qua
-**225 test trên Windows**, không có skip; **74 test Node** kiểm tra hình học,
+**249 test trên Windows**, không có skip; **84 test Node** kiểm tra hình học,
 vòng đời animation, camera, gesture, hồ sơ, đồng hồ và gió. Kiểm tra giao diện thực tế được
 ghi ở [UI verification](../docs/ui-verification.md).
 
@@ -103,7 +109,7 @@ Từ thư mục gốc:
 .\.venv\Scripts\python.exe -m pytest Source\tests -q
 ```
 
-Bộ kiểm tra gồm engine/loader, bốn solver và cost/heuristic, đặc tính của 12 màn, vòng đời controller, worker spawn thật và GUI thật. Kiểm tra GUI tạo cửa sổ ẩn; máy không có Tcl/Tk hoặc display sẽ báo skip cho phần đó. Bản Windows hiện tại chạy toàn bộ **129 test, không có skip**. Ghi chép xác minh nằm ở `../docs/verification.md`.
+Bộ kiểm tra gồm engine/loader, bốn solver và cost/heuristic, đặc tính của 12 màn, vòng đời controller, worker spawn thật và GUI thật. Kiểm tra GUI tạo cửa sổ ẩn; máy không có Tcl/Tk hoặc display sẽ báo skip cho phần đó. Bản Windows hiện tại chạy toàn bộ **249 test, không có skip**. Ghi chép xác minh nằm ở `../docs/verification.md`.
 
 Nếu môi trường hạn chế không cho ghi thư mục temp mặc định, thêm `--basetemp` trỏ vào một **thư mục mới, riêng cho test trong workspace**. Pytest sẽ quản lý và có thể xóa nội dung thư mục đó khi chạy lại, nên không chọn thư mục chứa tài liệu/mã của nhóm.
 
@@ -169,9 +175,9 @@ print(result.status.value, result.actions, result.solution_cost)
 
 ## 8. Giới hạn và việc hoàn thiện bản nộp
 
-- GUI Tkinter là góc nhìn 2D và replay từng bước. Giao diện web mới có isometric,
-  animation lăn/rơi và Undo; chưa có editor, lưu/khôi phục phiên đang chơi hoặc
-  bảng điều khiển solver trong trình duyệt. Mở Tkinter để dùng BFS/DFS/UCS/A* và metrics.
+- GUI Tkinter là góc nhìn 2D và replay từng bước. Giao diện web Kazu có bàn 3D,
+  animation lăn/rơi, Undo và bảng BFS/DFS/UCS/A* cùng metrics/phát lại;
+  chưa có editor hoặc lưu/khôi phục phiên đang chơi sau khi tải lại trang.
 - Bộ 12 màn nhỏ để kiểm chứng cơ chế. Chênh lệch thời gian rất nhỏ không đủ để kết luận một thuật toán luôn nhanh hơn; muốn phân tích quy mô lớn cần thêm bộ màn và ghi riêng phiên bản thực nghiệm.
 - Ngưỡng memory kiểm tra định kỳ là ngưỡng mềm, có thể bị vượt giữa hai lần kiểm tra. Watchdog ngoài worker dùng để tránh treo, không thay số liệu tìm kiếm.
 - Source và dữ liệu đo không thay cho báo cáo/video. Nhóm vẫn phải hiểu mã, kiểm tra trên Python/máy nộp, điền tên/MSSV/phân công thực tế, viết Report.pdf, nguồn tham khảo/phụ lục dùng AI và quay video theo đề.

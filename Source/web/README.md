@@ -1,4 +1,4 @@
-# Bloxorz · Five quiet worlds
+# Bloxorz · Kazu + lời giải thuật toán
 
 Three.js 0.186.1 + HTML/CSS UI overlay; luật chơi và solver chạy bằng Python.
 Thư viện Three.js (MIT) được lưu tại `vendor/`, không tải CDN khi chơi.
@@ -51,6 +51,37 @@ với bụi pixel và tile lún nhẹ khi đứng. State/cầu cũ
 bộ chuyển động kết thúc. Reduced motion bỏ lăn, quán tính và chuyển động nền;
 camera vẫn cập nhật góc khi người dùng điều khiển.
 
+## Lời giải BFS, DFS, UCS, A*
+
+Bấm **Lời giải** phía trên thanh Hoàn tác. Bàn chơi tạm dừng để các thuật toán
+cùng giải từ một snapshot: vị trí khối, cầu, cube đang chọn và số bước hiện tại.
+
+1. Chọn BFS, DFS, UCS hoặc A*, hoặc **Chạy cả 4** để so sánh lần lượt.
+2. Bảng hiển thị trạng thái, số thao tác, cost, tổng thời gian, peak Python memory
+   và số node mở rộng. Chọn tên thuật toán trong bảng để xem lại kết quả đã chạy.
+3. Phần dưới hiển thị các bước đánh số, gồm cả thao tác đổi cube. Mở **Cách …
+   tìm đường** để đọc giải thích của thuật toán đang chọn.
+4. **Phát lại** đưa bàn về đúng snapshot đã giải rồi đi từng bước qua engine.
+   Có nút dừng; sau khi dừng có thể tiếp tục chơi hoặc phát lại thuật toán khác.
+
+UNIT tính mỗi thao tác là 1. FRAGILE_PENALTY tính thao tác đi vào ô fragile là 3,
+còn lại là 1. BFS tối ưu số thao tác; DFS không bảo đảm ngắn nhất. UCS/A* tối ưu
+cost đã chọn. Chuỗi hiển thị là đường lời giải, không phải thứ tự duyệt toàn bộ
+không gian trạng thái. Hướng trong danh sách theo bàn ở góc nhìn ban đầu;
+phát lại tự đặt camera về góc này. Khi tự đi thêm, undo, restart hoặc đổi màn,
+kết quả cũ được xóa để tránh phát lại từ sai vị trí.
+
+Mỗi lượt có ngân sách 30 giây, 256 MiB Python tracked memory khi runtime hỗ trợ
+đo. TIMEOUT/MEMORY_LIMIT không được kết luận là vô nghiệm. Dấu `—` là chưa có
+số liệu; không thay bằng số 0 giả. Bản HTTP chạy solver trong process riêng và
+có **Dừng tìm kiếm**. Bản Pages giải trong Web Worker với cùng ngân sách; nút
+hủy không hiện vì không thể ngắt Python đồng bộ đang chạy trong worker.
+
+Ván đã xem lời giải FOUND hoặc dùng phát lại là ván có hỗ trợ: không ghi kỷ lục
+hay mở khóa trong hồ sơ. Chơi lại để bắt đầu ván tự giải mới. Giao diện giữ bàn
+3D, năm biome và hồ sơ của Kazu; HUD/padding được thu gọn, thông tin giải thuật
+nằm trong hộp riêng, không che bàn khi chơi.
+
 ## Biome và hiệu năng
 
 | Màn | Biome | Cảnh thủ tục |
@@ -89,10 +120,11 @@ kiểm tra bằng viewport trình duyệt, chưa đo trên điện thoại vật
 | `run-clock.js` | Thời gian chơi thực, bỏ thời gian menu/pause |
 | `impact.js` / `landing-dust.js` | Settle 50 ms, footprint, pool bụi pixel |
 | `wind.js` | Shader gió neo gốc trên InstancedMesh |
-| `app.js` | HTTP, HUD, menu biome, modal, bàn phím, audio và kỷ lục |
+| `app.js` | HTTP, HUD, menu, solver polling, replay, bàn phím, audio và kỷ lục |
+| `solutions.js` | Bảng so sánh, chuỗi bước, giải thích thuật toán và định dạng metrics |
 | `styles.css` | Glass overlay, responsive, reduced motion |
 | `levels/` | 30 JSON, schema, manifest, lời giải và hướng dẫn thêm màn |
-| `../webapp.py` | HTTP local, catalog, sao, session và Undo |
+| `../webapp.py` | HTTP local, catalog, session, solver worker, kiểm tra và phát lại lời giải |
 
 Game mở màn chọn hồ sơ local, mỗi người có tên/avatar, stats và tiến trình riêng.
 Menu nhóm 5 chương, mỗi chương 6 màn; hồ sơ mới mở màn 1, thắng để mở màn kế tiếp.

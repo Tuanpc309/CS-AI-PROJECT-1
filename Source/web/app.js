@@ -5,6 +5,7 @@ import { ProfileStore, PROFILE_PREFIX, canPlay, unlockedFor } from './profiles.j
 import { ProfileUI, avatarIcon } from './profile-ui.js';
 import { RunClock, formatTime } from './run-clock.js';
 import { requestGame } from './transport.js';
+import { ALGORITHMS, ALGORITHM_LABELS, renderSolutions } from './solutions.js';
 
 const $ = selector => document.querySelector(selector);
 const icon = name => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
@@ -15,6 +16,10 @@ const modal = $('#modal');
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
 let data, catalog = [], token = '', busy = true, disconnected = false;
 let modalKind = '', toastTimer, audioContext = null, soundEnabled = false;
+let selectedAlgorithm = 'BFS', solutionPolicy = 'UNIT';
+let solving = false, activeAlgorithm = null, cancelRequested = false;
+let replaying = false, replayStopRequested = false, assistedRun = false;
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const gestures=new BoardGestures((dx,dy)=>board.orbitDrag(dx,dy),(dx,dy)=>move(board.swipe(dx,dy),true));
 let best = {},runOwner=null,recordedWin=false,pendingWin=null,victoryMs=0,saveMessage='';
 const profiles=new ProfileStore(localStorage,{locks:navigator.locks});
@@ -28,8 +33,8 @@ profiles.subscribe(user=>{
  if(profileUI.visible)profileUI.render();
  if(modal.open&&modalKind==='levels'&&data)showModal('levels');
 });
-function syncClock(){board.suspended=profileUI.visible;if(profiles.currentUser&&!profileUI.visible&&!modal.open&&!$('#profile-editor').open&&!disconnected&&!document.hidden&&data?.phase==='PLAYING')clock.resume();else clock.pause();}
-function startRun(){clock.reset();runOwner=profiles.currentUser?.id;recordedWin=false;pendingWin=null;victoryMs=0;saveMessage='';}
+function syncClock(){board.suspended=profileUI.visible;if(profiles.currentUser&&!profileUI.visible&&!modal.open&&!$('#profile-editor').open&&!disconnected&&!document.hidden&&!solving&&!replaying&&data?.phase==='PLAYING')clock.resume();else clock.pause();}
+function startRun(){clock.reset();runOwner=profiles.currentUser?.id;recordedWin=false;pendingWin=null;victoryMs=0;saveMessage='';assistedRun=false;}
 
 async function request(path, body) {
   return requestGame(path,body,token,message=>{
@@ -38,16 +43,22 @@ async function request(path, body) {
 }
 
 function controls() {
-  const locked = busy || board.animating || disconnected || !data || !profiles.currentUser || profileUI.visible;
+  const working = solving || replaying || data?.solver?.busy || data?.replay?.active;
+  const locked = busy || working || board.animating || disconnected || !data || !profiles.currentUser || profileUI.visible;
   $('#restart').disabled = locked;
   $('#pause').disabled = locked || data?.phase !== 'PLAYING';
   $('#undo').disabled = locked || !data?.canUndo || data?.phase !== 'PLAYING';
   $('#switch-cube').disabled = locked || data?.phase !== 'PLAYING';
+  $('#switch-cube').hidden = data?.state.mode !== 'SPLIT' || replaying;
   document.querySelectorAll('[data-move]').forEach(button => button.disabled = locked || data?.phase !== 'PLAYING');
   document.querySelectorAll('[data-open]').forEach(button => button.disabled = locked);
-  modal.querySelectorAll('button, input').forEach(element => element.disabled = locked || element.dataset.locked==='true');
-  $('#profile-switch').disabled=busy||board.animating||disconnected;
-  $('#game-shell').setAttribute('aria-busy', String(busy));
+  modal.querySelectorAll('button, input, select').forEach(element => {
+    element.disabled = (element.dataset.allowBusy==='true' ? disconnected : locked) || element.dataset.locked==='true';
+  });
+  $('#profile-switch').disabled=locked;
+  $('#stop-replay').disabled=!replaying||disconnected;
+  $('#replay-controls').hidden=!replaying;
+  $('#game-shell').setAttribute('aria-busy', String(busy || working));
 }
 
 function updateHUD(previous) {
@@ -86,6 +97,7 @@ function toast(message) {
 }
 
 async function rememberWin() {
+  if(assistedRun){saveMessage='Dùng lời giải hỗ trợ · không ghi kỷ lục hoặc mở khóa màn.';return true;}
   if(recordedWin||data.stars===null||!runOwner)return true;
   pendingWin||={id:runOwner,result:{level:data.level,moves:data.moves,stars:data.stars,timeMs:victoryMs,catalog}};
   try{await profiles.recordWin(pendingWin.id,pendingWin.result);pendingWin=null;recordedWin=true;saveMessage='Đã lưu vào hồ sơ của bạn.';return true;}
@@ -142,6 +154,8 @@ function showError(error) {
 
 async function command(commandName, extra = {}, options = {}) {
   if (busy || disconnected || !data) return false;
+  if ((solving || data.solver?.busy) && !['solve','solve_poll','solve_cancel'].includes(commandName)) return false;
+  if ((replaying || data.replay?.active) && !['replay_start','replay_step','replay_stop'].includes(commandName)) return false;
   if(commandName==='load'&&!canPlay(profiles.currentUser,catalog.find(level=>level.id===extra.level),catalog)){toast('Hoàn thành màn trước để mở hành trình này.');return false;}
   if(pendingWin&&!await rememberWin()){toast(saveMessage);return false;}
   if(['pause','load','restart'].includes(commandName))clock.pause();
@@ -152,11 +166,12 @@ async function command(commandName, extra = {}, options = {}) {
     if(next.phase==='WON'){clock.pause();victoryMs=clock.milliseconds;}
     else if(next.phase==='LOST')clock.pause();
     if (options.close && modal.open) { modal.close(); modalKind = ''; }
-    if (commandName === 'move') {
+    if (commandName === 'move' || commandName === 'replay_step') {
+      const action = commandName === 'replay_step' ? next.replay.action : extra.action;
       const changed = JSON.stringify(previous.state) !== JSON.stringify(next.state) || previous.phase !== next.phase;
       if (changed) {
         if(next.phase==='LOST')playTone('loss');
-        await board.animate(previous, next, extra.action);
+        await board.animate(previous, next, action);
       } else { board.set(next); toast(next.message); }
       if (next.events.length && next.phase === 'PLAYING') {
         const eventLabels = {SPLIT:'Hai khối đã tách. Dùng Space hoặc nút Đổi khối.',MERGE:'Hai nửa đã hợp nhất.',BRIDGE_CHANGED:'Cầu đã đổi trạng thái.'};
@@ -176,7 +191,10 @@ async function command(commandName, extra = {}, options = {}) {
     if (next.phase === 'WON' && options.terminal !== false) { await rememberWin(); showModal('victory'); playTone('win'); }
     else if (next.phase === 'LOST' && options.terminal !== false) showModal('loss');
     return true;
-  } catch(error) { showError(error); return false; }
+  } catch(error) {
+    if(error.status===400){toast(error.message);return false;}
+    showError(error); return false;
+  }
   finally { busy = false; controls();syncClock(); }
 }
 
@@ -204,22 +222,101 @@ function chapters() {
  }).join('');
 }
 
+function solutionsHTML() {
+  const solver = {...data.solver};
+  if (activeAlgorithm) {
+    solver.busy = true;
+    solver.active = {algorithm:activeAlgorithm, cost_policy:solutionPolicy};
+  }
+  return renderSolutions({solver, policy:solutionPolicy, selectedAlgorithm, runAll:solving});
+}
+
+function refreshSolutions() {
+  if (!modal.open || modalKind !== 'solutions') return;
+  const content = $('#modal-content');
+  const scroll = modal.scrollTop;
+  const focus = document.activeElement;
+  const action = focus?.dataset.action, algorithm = focus?.dataset.algorithm;
+  const expanded = [...content.querySelectorAll('details')].map(item => item.open);
+  content.innerHTML = solutionsHTML();
+  content.querySelectorAll('details').forEach((item,index) => item.open = expanded[index] || false);
+  controls();
+  if (focus?.id === 'solution-policy') $('#solution-policy')?.focus({preventScroll:true});
+  if (action) [...content.querySelectorAll('[data-action]')].find(item =>
+    item.dataset.action === action && item.dataset.algorithm === algorithm && !item.disabled)?.focus({preventScroll:true});
+  modal.scrollTop = scroll;
+}
+
+async function runSolvers(all = false) {
+  if (solving || replaying || busy || disconnected || data.solver?.busy) return;
+  solving = true; cancelRequested = false; clock.pause();
+  try {
+    for (const algorithm of all ? ALGORITHMS : [selectedAlgorithm]) {
+      if (cancelRequested) break;
+      selectedAlgorithm = algorithm; activeAlgorithm = algorithm;
+      refreshSolutions();
+      if (!await command('solve', {algorithm, cost_policy:solutionPolicy}, {terminal:false})) break;
+      while (data.solver?.busy && !disconnected) {
+        refreshSolutions();
+        await delay(120);
+        if (!await command(cancelRequested ? 'solve_cancel' : 'solve_poll', {}, {terminal:false})) break;
+      }
+      activeAlgorithm = null;
+      if (data.solver?.results?.[`${algorithm}:${solutionPolicy}`]?.status === 'FOUND') assistedRun = true;
+      refreshSolutions();
+      if (data.solver?.busy || disconnected) break;
+    }
+  } finally {
+    solving = false; activeAlgorithm = null;
+    refreshSolutions(); controls(); syncClock();
+  }
+}
+
+async function replaySolution(algorithm) {
+  if (solving || replaying || busy || disconnected) return;
+  selectedAlgorithm = algorithm; replaying = true; replayStopRequested = false;
+  assistedRun = true; clock.pause();
+  try {
+    if (!await command('replay_start', {algorithm, cost_policy:solutionPolicy}, {close:true, terminal:false})) return;
+    board.resetCamera();
+    $('#replay-label').textContent = `${ALGORITHM_LABELS[algorithm]} · 0 / ${data.replay.total} bước`;
+    controls();
+    while (data.replay?.active && !replayStopRequested && !disconnected) {
+      await delay(250);
+      if (replayStopRequested) break;
+      if (!await command('replay_step', {}, {terminal:false})) break;
+      $('#replay-label').textContent = `${ALGORITHM_LABELS[algorithm]} · ${data.replay.index} / ${data.replay.total} bước`;
+    }
+    if (data.replay?.active && !disconnected) await command('replay_stop', {}, {terminal:false});
+  } finally {
+    replaying = false; controls();
+    if (!disconnected) {
+      if (data.phase === 'PLAYING') await command('pause', {}, {terminal:false});
+      showModal('solutions');
+      controls(); syncClock();
+    }
+  }
+}
+
 function showModal(kind) {
   modalKind = kind;
   modal.classList.toggle('levels-dialog', kind === 'levels');
+  modal.classList.toggle('solutions-dialog', kind === 'solutions');
   const title = escapeHTML(data.level.title);
   let html = '';
-  if (kind === 'victory') {
+  if (kind === 'solutions') {
+    html = solutionsHTML();
+  } else if (kind === 'victory') {
     const next = nextLevel();
     html = `<div class="victory-emblem">${icon('cube')}</div><p class="modal-eyebrow">MÀN ${pad(data.level.number)} · HOÀN THÀNH</p>
       <h2 id="modal-title">${data.stars === 3 ? 'Một nước đi tinh tế.' : 'Bạn đã tìm thấy lối đi.'}</h2>
       <p class="modal-description">${data.stars === 3 ? 'Vừa đủ bước. Trọn vẹn một hành trình.' : 'Mỗi lần thử là một góc nhìn mới.'}</p>
-      <div class="victory-stars" role="img" aria-label="${data.stars || 0} trên 3 sao">${[0,1,2].map(i=>`<svg class="${i < data.stars ? 'earned' : 'unearned'}" aria-hidden="true"><use href="#i-star"/></svg>`).join('')}</div>
+      <div class="victory-stars" role="img" aria-label="${assistedRun ? 'Hoàn thành có hỗ trợ' : `${data.stars || 0} trên 3 sao`}">${[0,1,2].map(i=>`<svg class="${!assistedRun && i < data.stars ? 'earned' : 'unearned'}" aria-hidden="true"><use href="#i-star"/></svg>`).join('')}</div>
       <div class="result-stats"><div><span>Bước đi của bạn</span><strong>${pad(data.moves)}</strong></div><div><span>Số bước tối ưu</span><strong>${data.level.optimal === null ? '—' : pad(data.level.optimal)}</strong></div></div>
       <p class="victory-time">Thời gian chơi: <strong>${formatTime(victoryMs)}</strong></p><p class="modal-footnote" role="status">${escapeHTML(saveMessage)}</p>
       <button class="primary-button" data-dialog-action="${next ? 'next' : 'levels'}" autofocus>${next ? 'Màn tiếp theo' : 'Về danh sách màn'}${icon('arrow')}</button>
       <div class="modal-actions"><button class="secondary-button" data-dialog-action="restart">${icon('restart')}Chơi lại</button><button class="secondary-button" data-dialog-action="levels">${icon('grid')}Menu</button></div>
-      <p class="modal-footnote">${next ? `Tiếp theo: ${escapeHTML(next.title)}` : 'Bạn đã đi qua toàn bộ hành trình. Thử chinh phục 3 sao nhé.'}</p>`;
+      <p class="modal-footnote">${assistedRun ? 'Chơi lại để thử tự tìm đường và ghi kỷ lục.' : next ? `Tiếp theo: ${escapeHTML(next.title)}` : 'Bạn đã đi qua toàn bộ hành trình. Thử chinh phục 3 sao nhé.'}</p>`;
   } else if (kind === 'pause') {
     html = `${closeButton()}<div class="pause-illustration">${icon('pause')}</div><p class="modal-eyebrow">MỘT NHỊP NGHỈ</p><h2 id="modal-title">Cứ thong thả.</h2><p class="modal-description">${title} vẫn ở đây, chờ bạn trở lại.</p><button class="primary-button" data-dialog-action="close" autofocus>${icon('play')}Tiếp tục chơi</button><div class="modal-actions"><button class="secondary-button" data-dialog-action="restart">${icon('restart')}Chơi lại</button><button class="secondary-button" data-dialog-action="levels">${icon('grid')}Màn chơi</button></div><button class="secondary-button profile-back" data-dialog-action="profiles">⇄ Đổi người chơi</button>`;
   } else if (kind === 'loss') {
@@ -243,13 +340,13 @@ function showModal(kind) {
 }
 
 async function openOverlay(kind) {
-  if (busy || disconnected || !data) return;
+  if (busy || solving || replaying || disconnected || !data) return;
   if (data.phase === 'PLAYING' && !await command('pause', {}, { terminal:false })) return;
   showModal(kind); controls();syncClock();
 }
 
 async function closeOverlay() {
-  if (busy || disconnected) return;
+  if (busy || solving || replaying || disconnected) return;
   if (modalKind === 'victory' || modalKind === 'loss') return;
   if (data.phase === 'PAUSED') {
     if (!await command('resume', {}, { close:true })) return;
@@ -263,7 +360,7 @@ async function closeOverlay() {
 }
 
 async function openProfiles(){
- if(busy||disconnected)return;
+ if(busy||solving||replaying||disconnected)return;
  if(pendingWin&&!await rememberWin()){toast(saveMessage);return;}
  clock.pause();
  if(data?.phase==='PLAYING'&&!await command('pause',{}, {terminal:false}))return;
@@ -292,7 +389,7 @@ async function selectProfile(id){
 }
 
 async function move(action, world = false) {
-  if (modal.open || busy || board.animating || disconnected || data?.phase !== 'PLAYING') return;
+  if (modal.open || busy || solving || replaying || board.animating || disconnected || data?.phase !== 'PLAYING') return;
   const button=document.querySelector(`[data-move="${action}"]`);
   button?.classList.add('pressed');
   await command('move', {action:world?action:board.direction(action)});
@@ -308,6 +405,7 @@ $('#switch-cube').addEventListener('click',()=>move('SWITCH'));
 $('#sound').addEventListener('click',()=>{soundEnabled=!soundEnabled;updateSound();if(soundEnabled)playTone();});
 $('#profile-switch').addEventListener('click',openProfiles);
 $('#profile-editor').addEventListener('close',syncClock);
+$('#stop-replay').addEventListener('click',()=>{replayStopRequested=true;$('#stop-replay').disabled=true;});
 $('#camera-reset').addEventListener('click',()=>board.resetCamera());
 $('#camera-left').addEventListener('click',()=>board.orbitDrag(Math.PI/2/.008,0));
 $('#camera-right').addEventListener('click',()=>board.orbitDrag(-Math.PI/2/.008,0));
@@ -318,7 +416,21 @@ $('#board').addEventListener('camera-change',()=>{
 modal.addEventListener('cancel', event=>{event.preventDefault();closeOverlay();});
 modal.addEventListener('click', async event=>{
   const button=event.target.closest('button');
-  if (!button || busy || disconnected) return;
+  if (!button || button.disabled || disconnected) return;
+  if (button.dataset.action === 'solve-cancel') { cancelRequested = true; return; }
+  if (busy || solving || replaying) return;
+  if (button.dataset.action) {
+    const algorithm = button.dataset.algorithm;
+    switch (button.dataset.action) {
+      case 'solve': selectedAlgorithm = algorithm; await runSolvers(); break;
+      case 'solve-all': await runSolvers(true); break;
+      case 'show-solution': selectedAlgorithm = algorithm; refreshSolutions(); break;
+      case 'replay': await replaySolution(algorithm); break;
+      case 'close': await closeOverlay(); break;
+      case 'menu': showModal(data.phase === 'PAUSED' ? 'pause' : 'levels'); controls(); break;
+    }
+    return;
+  }
   if (button.dataset.level) { await command('load',{level:button.dataset.level},{close:true}); return; }
   switch(button.dataset.dialogAction) {
     case 'close': await closeOverlay(); break;
@@ -327,6 +439,12 @@ modal.addEventListener('click', async event=>{
     case 'next': { const next=nextLevel(); if(next)await command('load',{level:next.id},{close:true}); break; }
     case 'levels': showModal('levels'); break;
     case 'profiles': await openProfiles();break;
+  }
+});
+
+modal.addEventListener('change', event=>{
+  if (event.target.id === 'solution-policy' && !solving && !busy) {
+    solutionPolicy = event.target.value; refreshSolutions();
   }
 });
 
@@ -343,7 +461,7 @@ modal.addEventListener('submit', async event=>{
 
 const keyActions={ArrowUp:'UP',ArrowDown:'DOWN',ArrowLeft:'LEFT',ArrowRight:'RIGHT',w:'UP',s:'DOWN',a:'LEFT',d:'RIGHT'};
 document.addEventListener('keydown',event=>{
-  if(profileUI.visible||$('#profile-editor').open)return;
+  if(profileUI.visible||$('#profile-editor').open||solving||replaying)return;
   if(event.ctrlKey||event.metaKey||event.altKey||event.target.closest('input,textarea,select,[contenteditable="true"]')) return;
   if(modal.open) return; // Dialog owns Tab, Escape and button activation.
   const key=event.key.length===1?event.key.toLowerCase():event.key;
@@ -357,7 +475,7 @@ document.addEventListener('keydown',event=>{
 });
 
 $('#board').addEventListener('pointerdown',event=>{
-  if(busy||modal.open||![0,2].includes(event.button)) return;
+  if(busy||solving||replaying||modal.open||![0,2].includes(event.button)) return;
   gestures.down(event.pointerId,event.clientX,event.clientY,event.button);
   $('#board').setPointerCapture(event.pointerId);
 });
@@ -373,7 +491,8 @@ $('#board').addEventListener('pointercancel',clearPointer);
 $('#board').addEventListener('lostpointercapture',clearPointer);
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden)clock.pause();else syncClock();
-  if(document.hidden&&data?.phase==='PLAYING'&&!busy&&!modal.open) openOverlay('pause');
+  if(document.hidden&&replaying)replayStopRequested=true;
+  if(document.hidden&&data?.phase==='PLAYING'&&!busy&&!modal.open&&!replaying) openOverlay('pause');
 });
 
 async function connect() {
@@ -385,10 +504,18 @@ async function connect() {
   try {
     const fresh=!token;
     const level=profiles.currentUser?catalog.find(level=>level.collection==='campaign'&&level.number===unlockedFor(profiles.currentUser,catalog))?.id:undefined;
-    const next=token ? await request('/api/command',{command:'state'}) : await request('/api/session',level?{level}:{});
+    let next=token ? await request('/api/command',{command:'state'}) : await request('/api/session',level?{level}:{});
     if(next.session) {token=next.session;catalog=next.catalog;}
+    // A lost HTTP response can leave the server working after local loops stop.
+    if(next.solver?.busy) next=await request('/api/command',{command:'solve_cancel'});
+    if(next.replay?.active) {
+      assistedRun=true;
+      next=await request('/api/command',{command:'replay_stop'});
+      if(next.phase==='PLAYING')next=await request('/api/command',{command:'pause'});
+    }
     data=next; disconnected=false;
     if(fresh)startRun();
+    if(next.replay?.algorithm || Object.values(next.solver?.results||{}).some(result=>result.status==='FOUND'))assistedRun=true;
     await profiles.migrateLegacy(catalog);
     if(!profiles.currentUser)profileUI.show();
     profileUI.error('');$('#profile-retry').hidden=true;$('#profile-loading').hidden=true;

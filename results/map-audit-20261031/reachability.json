@@ -1,0 +1,605 @@
+[
+  {
+    "id": "campaign_01",
+    "states": 11,
+    "edges": 19,
+    "branch_distribution": {
+      "1": 3,
+      "3": 2,
+      "2": 5
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "campaign_02",
+    "states": 83,
+    "edges": 206,
+    "branch_distribution": {
+      "2": 38,
+      "3": 34,
+      "4": 6,
+      "1": 4
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.01599999999598367
+  },
+  {
+    "id": "campaign_03",
+    "states": 91,
+    "edges": 254,
+    "branch_distribution": {
+      "2": 32,
+      "3": 42,
+      "4": 16
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "campaign_04",
+    "states": 31,
+    "edges": 63,
+    "branch_distribution": {
+      "2": 14,
+      "3": 8,
+      "4": 1,
+      "1": 7
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "campaign_05",
+    "states": 71,
+    "edges": 154,
+    "branch_distribution": {
+      "2": 33,
+      "3": 24,
+      "4": 1,
+      "1": 12
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.01600000000325963
+  },
+  {
+    "id": "campaign_06",
+    "states": 114,
+    "edges": 293,
+    "branch_distribution": {
+      "1": 10,
+      "3": 41,
+      "2": 44,
+      "4": 18
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "campaign_07",
+    "states": 148,
+    "edges": 399,
+    "branch_distribution": {
+      "3": 74,
+      "4": 20,
+      "1": 9,
+      "2": 44
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.014999999999417923
+  },
+  {
+    "id": "campaign_08",
+    "states": 136,
+    "edges": 338,
+    "branch_distribution": {
+      "3": 54,
+      "1": 14,
+      "2": 53,
+      "4": 14
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.01600000000325963
+  },
+  {
+    "id": "campaign_09",
+    "states": 133,
+    "edges": 321,
+    "branch_distribution": {
+      "3": 55,
+      "2": 55,
+      "4": 8,
+      "1": 14
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "campaign_10",
+    "states": 152,
+    "edges": 416,
+    "branch_distribution": {
+      "1": 5,
+      "4": 21,
+      "3": 77,
+      "2": 48
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.014999999999417923
+  },
+  {
+    "id": "campaign_11",
+    "states": 137,
+    "edges": 337,
+    "branch_distribution": {
+      "2": 60,
+      "1": 10,
+      "3": 57,
+      "4": 9
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.01599999999598367
+  },
+  {
+    "id": "campaign_12",
+    "states": 134,
+    "edges": 312,
+    "branch_distribution": {
+      "2": 63,
+      "3": 52,
+      "1": 14,
+      "4": 4
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "campaign_13",
+    "states": 247,
+    "edges": 642,
+    "branch_distribution": {
+      "3": 95,
+      "2": 113,
+      "4": 31,
+      "1": 7
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.01600000000325963
+  },
+  {
+    "id": "campaign_14",
+    "states": 235,
+    "edges": 582,
+    "branch_distribution": {
+      "2": 101,
+      "3": 86,
+      "4": 25,
+      "1": 22
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.014999999999417923
+  },
+  {
+    "id": "campaign_15",
+    "states": 235,
+    "edges": 582,
+    "branch_distribution": {
+      "2": 101,
+      "4": 25,
+      "3": 86,
+      "1": 22
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.01599999999598367
+  },
+  {
+    "id": "campaign_16",
+    "states": 357,
+    "edges": 890,
+    "branch_distribution": {
+      "3": 131,
+      "1": 31,
+      "4": 39,
+      "2": 155
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.031000000002677552
+  },
+  {
+    "id": "campaign_17",
+    "states": 357,
+    "edges": 890,
+    "branch_distribution": {
+      "2": 155,
+      "3": 131,
+      "4": 39,
+      "1": 31
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.01600000000325963
+  },
+  {
+    "id": "campaign_18",
+    "states": 353,
+    "edges": 842,
+    "branch_distribution": {
+      "1": 31,
+      "3": 115,
+      "2": 179,
+      "4": 27
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.030999999995401595
+  },
+  {
+    "id": "campaign_19",
+    "states": 502,
+    "edges": 1445,
+    "branch_distribution": {
+      "1": 16,
+      "2": 101,
+      "3": 305,
+      "4": 78,
+      "0": 1
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.031000000002677552
+  },
+  {
+    "id": "campaign_20",
+    "states": 787,
+    "edges": 2493,
+    "branch_distribution": {
+      "1": 19,
+      "2": 130,
+      "3": 330,
+      "4": 306,
+      "0": 1
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.06300000000192085
+  },
+  {
+    "id": "campaign_21",
+    "states": 1222,
+    "edges": 3930,
+    "branch_distribution": {
+      "1": 65,
+      "2": 169,
+      "3": 463,
+      "4": 482,
+      "5": 42
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.09399999999732245
+  },
+  {
+    "id": "campaign_22",
+    "states": 1888,
+    "edges": 6693,
+    "branch_distribution": {
+      "1": 17,
+      "2": 203,
+      "3": 664,
+      "4": 732,
+      "0": 1,
+      "5": 270
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.15600000000267755
+  },
+  {
+    "id": "campaign_23",
+    "states": 1330,
+    "edges": 4461,
+    "branch_distribution": {
+      "1": 19,
+      "2": 175,
+      "3": 444,
+      "4": 690,
+      "0": 1
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.09399999999732245
+  },
+  {
+    "id": "campaign_24",
+    "states": 2540,
+    "edges": 9098,
+    "branch_distribution": {
+      "1": 86,
+      "2": 237,
+      "3": 774,
+      "4": 994,
+      "5": 448
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.20300000000133878
+  },
+  {
+    "id": "campaign_25",
+    "states": 1792,
+    "edges": 5797,
+    "branch_distribution": {
+      "1": 105,
+      "2": 259,
+      "3": 687,
+      "4": 587,
+      "5": 153
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.13999999999941792
+  },
+  {
+    "id": "campaign_26",
+    "states": 1778,
+    "edges": 5758,
+    "branch_distribution": {
+      "1": 103,
+      "2": 256,
+      "3": 681,
+      "4": 585,
+      "5": 152
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.1569999999992433
+  },
+  {
+    "id": "campaign_27",
+    "states": 1806,
+    "edges": 5837,
+    "branch_distribution": {
+      "1": 108,
+      "2": 260,
+      "3": 693,
+      "4": 590,
+      "5": 154
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.15600000000267755
+  },
+  {
+    "id": "campaign_28",
+    "states": 1820,
+    "edges": 5879,
+    "branch_distribution": {
+      "1": 110,
+      "2": 262,
+      "3": 698,
+      "4": 594,
+      "5": 155
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.13999999999941792
+  },
+  {
+    "id": "campaign_29",
+    "states": 1778,
+    "edges": 5758,
+    "branch_distribution": {
+      "1": 103,
+      "2": 256,
+      "3": 681,
+      "4": 585,
+      "5": 152
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.14100000000325963
+  },
+  {
+    "id": "campaign_30",
+    "states": 1848,
+    "edges": 5961,
+    "branch_distribution": {
+      "1": 115,
+      "2": 264,
+      "3": 711,
+      "4": 600,
+      "5": 157
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.13999999999941792
+  },
+  {
+    "id": "basic_01",
+    "states": 3,
+    "edges": 3,
+    "branch_distribution": {
+      "1": 1,
+      "2": 1
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "basic_02",
+    "states": 8,
+    "edges": 13,
+    "branch_distribution": {
+      "1": 1,
+      "2": 6
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "combined_01",
+    "states": 21,
+    "edges": 34,
+    "branch_distribution": {
+      "1": 6,
+      "2": 14
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "combined_02",
+    "states": 446,
+    "edges": 1181,
+    "branch_distribution": {
+      "1": 34,
+      "2": 132,
+      "3": 233,
+      "4": 46
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.031000000002677552
+  },
+  {
+    "id": "fragile_01",
+    "states": 32,
+    "edges": 67,
+    "branch_distribution": {
+      "1": 5,
+      "3": 10,
+      "2": 16
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "fragile_02",
+    "states": 71,
+    "edges": 174,
+    "branch_distribution": {
+      "2": 23,
+      "3": 30,
+      "4": 7,
+      "1": 10
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "no_solution_01",
+    "states": 3,
+    "edges": 4,
+    "branch_distribution": {
+      "1": 2,
+      "2": 1
+    },
+    "goals": 0,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "no_solution_02",
+    "states": 89,
+    "edges": 220,
+    "branch_distribution": {
+      "2": 43,
+      "3": 32,
+      "4": 8,
+      "1": 6
+    },
+    "goals": 0,
+    "complete": true,
+    "seconds": 0.01600000000325963
+  },
+  {
+    "id": "split_01",
+    "states": 337,
+    "edges": 913,
+    "branch_distribution": {
+      "1": 14,
+      "2": 104,
+      "3": 177,
+      "4": 40,
+      "0": 1
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.014999999999417923
+  },
+  {
+    "id": "split_02",
+    "states": 436,
+    "edges": 1194,
+    "branch_distribution": {
+      "1": 41,
+      "2": 123,
+      "3": 177,
+      "4": 94
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0319999999992433
+  },
+  {
+    "id": "switch_01",
+    "states": 12,
+    "edges": 19,
+    "branch_distribution": {
+      "2": 8,
+      "1": 3
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  },
+  {
+    "id": "switch_02",
+    "states": 85,
+    "edges": 209,
+    "branch_distribution": {
+      "2": 47,
+      "3": 27,
+      "4": 8,
+      "1": 2
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.014999999999417923
+  },
+  {
+    "id": "quiet_01",
+    "states": 82,
+    "edges": 219,
+    "branch_distribution": {
+      "1": 2,
+      "4": 20,
+      "3": 19,
+      "2": 40
+    },
+    "goals": 1,
+    "complete": true,
+    "seconds": 0.0
+  }
+]

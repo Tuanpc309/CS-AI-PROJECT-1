@@ -30,10 +30,11 @@ def browser_dispatch(encoded: str) -> str:
             key = data.get("level", _catalog.default)
             if not isinstance(key, str):
                 raise ValueError("Mã màn không hợp lệ.")
-            session = WebSession(_catalog, key)
+            # This dispatch runs in one Web Worker; WASM does not spawn processes.
+            session = WebSession(_catalog, key, sync_solver=True)
             token = secrets.token_urlsafe(32)
             if len(_sessions) >= 16:
-                del _sessions[next(iter(_sessions))]
+                _sessions.pop(next(iter(_sessions))).close()
             _sessions[token] = session
             result = {"session": token, "catalog": _catalog.items, **session.snapshot()}
         elif path == "/api/command":

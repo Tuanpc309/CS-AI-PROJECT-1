@@ -53,12 +53,13 @@
       <div class="biome-tag glass"><span class="biome-dot"></span><span id="biome-name">Rừng trên mây</span><span id="biome-progress">1 / 6</span></div>
       <div class="camera-controls glass" aria-label="Điều khiển camera"><button id="camera-left" aria-label="Xoay camera sang trái" title="Xoay 90 độ">↶</button><button id="camera-reset" aria-label="Đặt lại góc camera" title="Về góc nhìn ban đầu"><span>◇</span><small id="camera-angle">45°</small></button><button id="camera-right" aria-label="Xoay camera sang phải" title="Xoay 90 độ">↷</button></div>
       <div class="board-caption"><span class="caption-line"></span><p id="level-subtitle">Một khối nhỏ. Một hành trình mới.</p><span class="caption-line"></span></div>
-      <div class="goal-guide"><span class="goal-swatch"></span><span>Đứng thẳng vào ô đích</span></div>
 
       <div class="bottom-controls">
         <div class="action-bar glass"><button id="undo" class="undo-button" disabled title="Hoàn tác một bước · Z"><svg><use href="#i-undo"/></svg><span>Hoàn tác</span><span id="undo-badge" class="badge">5</span></button><span class="bar-divider"></span><button id="sound" class="icon-button" aria-label="Bật âm thanh" aria-pressed="false" title="Âm thanh"><svg><use href="#i-muted"/></svg></button><button class="icon-button" data-open="help" aria-label="Hướng dẫn chơi" title="Cách chơi · ?"><svg><use href="#i-help"/></svg></button></div>
+        <button id="solutions" class="solutions-button glass" data-open="solutions" aria-haspopup="dialog"><svg><use href="#i-play"/></svg><span>Lời giải</span><small>BFS · DFS · UCS · A*</small></button>
         <button id="switch-cube" class="switch-button glass" hidden><svg><use href="#i-switch"/></svg><span>Đổi khối <b id="active-cube">A</b></span><kbd>Space</kbd></button>
       </div>
+      <div id="replay-controls" class="replay-controls glass" hidden><span id="replay-label" role="status"></span><button id="stop-replay">Dừng phát lại</button></div>
 
       <div class="direction-control" aria-label="Điều khiển theo góc nhìn isometric"><div class="dpad"><button data-move="UP" class="dpad-up" aria-label="Lăn lên" title="Lên · ↑"><svg><use href="#i-arrow"/></svg></button><button data-move="RIGHT" class="dpad-right" aria-label="Lăn phải" title="Phải · →"><svg><use href="#i-arrow"/></svg></button><button data-move="DOWN" class="dpad-down" aria-label="Lăn xuống" title="Xuống · ↓"><svg><use href="#i-arrow"/></svg></button><button data-move="LEFT" class="dpad-left" aria-label="Lăn trái" title="Trái · ←"><svg><use href="#i-arrow"/></svg></button><span class="dpad-center"></span></div><span class="dpad-caption">LĂN THEO GÓC NHÌN</span></div>
 
@@ -66,7 +67,7 @@
       <div id="toast" class="toast glass" role="status" hidden></div>
     </section>
 
-    <footer class="footer"><span class="keyboard-help"><span class="key-group"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></span> theo góc nhìn · Chuột phải để xoay</span><span class="touch-help">1 ngón lăn · 2 ngón xoay góc nhìn</span><span class="footer-note">Không vội. Cứ thử một hướng khác. · Kazu<span class="small-orbit">✧</span></span></footer>
+    <footer class="footer"><span class="keyboard-help"><span class="key-group"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></span> theo góc nhìn · Chuột phải để xoay</span><span class="touch-help">1 ngón lăn · 2 ngón xoay góc nhìn</span></footer>
   </main>
 
   <section id="profile-screen" class="profile-screen" aria-labelledby="profile-title">

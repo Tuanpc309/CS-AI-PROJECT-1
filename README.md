@@ -4,14 +4,16 @@
 30 màn / 5 biome, camera 360°, hồ sơ local và engine Python chạy ngay trong
 trình duyệt. Xem [build và triển khai](docs/deployment.md).
 
-**Giao diện in-game mới:** chạy `python Source/main.py --web` để mở bản
-isometric responsive với HUD, Undo, Pause và animation chiến thắng. Xem
-[hướng dẫn UI](Source/web/README.md) và [kết quả kiểm tra/preview](docs/ui-verification.md).
+**Bản Kazu + lời giải thuật toán:** chạy `python Source/main.py --web` để mở
+giao diện Kazu với bố cục gọn hơn. Nút **Lời giải** hiển thị kết quả riêng của
+BFS, DFS, UCS, A*, so sánh số liệu và phát lại từng bước. Xem
+[hướng dẫn UI](Source/web/README.md) và [kiểm tra bản tích hợp](docs/kazu-solutions-verification.md).
 Giao diện web dùng lại engine Python; bản Tkinter vẫn chạy bằng lệnh không có `--web`.
+Thay đổi này đang ở source local; website công khai cần build/deploy lại để cập nhật.
 
 Tài liệu này giúp nhóm 5 thành viên hiểu yêu cầu, biết việc mình phải làm, biết cần trao đổi với ai và có tiêu chí kiểm tra trước khi nộp bài.
 
-**Trạng thái hiện tại:** đã tạo bản chạy đầy đủ trong [Source](./Source/README.md): engine cơ bản/nâng cao, loader JSON, GUI, controller/worker, BFS/DFS/UCS/A*, 12 màn và công cụ thực nghiệm. **129 test đã đạt; 216 lượt đo đúng kết quả dự kiến, mọi lời giải FOUND đã replay qua engine.** Có dữ liệu gốc, bảng và 5 biểu đồ trong [results](./results/README.md). Môi trường đã kiểm tra là Python 3.12.14 trên Windows; mục tiêu nhóm vẫn là 3.13.x và cần kiểm tra lại trên máy nộp. Báo cáo PDF, video, tên/MSSV, deadline và nơi nộp chưa hoàn thiện. Xem [ghi chép xác minh](./docs/verification.md) và [bàn giao theo thành viên](./docs/report-parts/README.md).
+**Trạng thái hiện tại:** đã tạo bản chạy đầy đủ trong [Source](./Source/README.md): engine cơ bản/nâng cao, loader JSON, GUI, controller/worker, BFS/DFS/UCS/A*, 12 màn và công cụ thực nghiệm. **249 test Python và 84 test JavaScript đã đạt; 216 lượt đo đúng kết quả dự kiến, mọi lời giải FOUND đã replay qua engine.** Có dữ liệu gốc, bảng và 5 biểu đồ trong [results](./results/README.md). Môi trường đã kiểm tra là Python 3.12.14 trên Windows; mục tiêu nhóm vẫn là 3.13.x và cần kiểm tra lại trên máy nộp. Báo cáo PDF, video, tên/MSSV, deadline và nơi nộp chưa hoàn thiện. Xem [ghi chép xác minh](./docs/verification.md) và [bàn giao theo thành viên](./docs/report-parts/README.md).
 
 **Nguồn yêu cầu:** [AI - Project 1.pdf](./AI%20-%20Project%201.pdf), môn CSC14003 — Introduction to Artificial Intelligence, Project 1: Bloxorz Solver. Số trang được ghi để nhóm tra lại đề gốc. Hai sơ đồ kiến trúc do nhóm cung cấp được lưu tại [docs/diagrams](./docs/diagrams/).
 
